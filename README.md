@@ -1,27 +1,15 @@
-# Công Cụ Việt — Tools
+# Gõ tiếng Việt trực tuyến (Telex/VNI) — không cần Unikey
 
-Mã nguồn mở của các công cụ online trên **[Công Cụ Việt](https://congcuviet.com)** — nền tảng công cụ online miễn phí cho người Việt, với hơn 300 công cụ về tài chính, nhà cửa, xe cộ, học tập và tiện ích mỗi ngày. Tất cả chạy ngay trên trình duyệt, không cần cài đặt, không cần đăng ký.
+Công cụ gõ tiếng Việt ngay trên trình duyệt theo kiểu Telex hoặc VNI, không cần cài Unikey hay bất kỳ phần mềm nào. Gõ tới đâu, dấu tiếng Việt hiện tới đó; soạn xong có thể sao chép hoặc tải xuống file văn bản.
 
-🌐 **Dùng trực tuyến:** https://congcuviet.com
+👉 **Dùng trực tuyến:** https://congcuviet.com/cong-cu/go-tieng-viet-truc-tuyen/
 
-## Cấu trúc repo
+## Mã nguồn
 
-Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồm:
+- `viet-ime-online.php` — giao diện công cụ
+- `viet-ime-online.css` — định dạng
+- `viet-ime-online.js` — bộ máy gõ Telex/VNI xử lý hoàn toàn phía trình duyệt
 
-- Bộ ba file mã nguồn của công cụ (`.php` giao diện, `.css` định dạng, `.js` xử lý) — đúng phiên bản đang chạy trên website.
-- File `README.md` giới thiệu công cụ kèm liên kết tới trang dùng trực tuyến.
+---
 
-## Danh sách công cụ đã có mã nguồn
-
-| Công cụ | Dùng trực tuyến |
-| --- | --- |
-| Gõ tiếng Việt trực tuyến (Telex/VNI) — không cần Unikey | [Mở công cụ](https://congcuviet.com/cong-cu/go-tieng-viet-truc-tuyen/) |
-| Tính tiền điện sinh hoạt bậc thang EVN | [Mở công cụ](https://congcuviet.com/cong-cu/tinh-tien-dien-sinh-hoat-bac-thang-evn/) |
-| Tính lãi gửi tiết kiệm ngân hàng | [Mở công cụ](https://congcuviet.com/cong-cu/tinh-lai-gui-tiet-kiem-ngan-hang/) |
-
-Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
-
-## Theo dõi Công Cụ Việt
-
-- Website: https://congcuviet.com
-- Telegram: https://t.me/congcuviet
+Một công cụ của [Công Cụ Việt](https://congcuviet.com) — nền tảng công cụ online miễn phí cho người Việt.
