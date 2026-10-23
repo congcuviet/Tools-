@@ -1,0 +1,195 @@
+.evb-soft-wrapper {
+    --neo-border: #1c2430;
+    --neo-shadow: 4px 4px 0 #1c2430;
+    --clr-yellow: #ffe66d;
+    --clr-green: #95d5b2;
+    --clr-blue: #a2d2ff;
+    --clr-pink: #ffafcc;
+    max-width: 780px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1a1a2e;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.evb-soft-wrapper * { box-sizing: border-box; }
+
+.evb-soft-wrapper .evb-form-card {
+    background: #ffffff;
+    border: 3px solid var(--neo-border);
+    border-radius: 22px;
+    box-shadow: var(--neo-shadow);
+    padding: 26px 28px;
+}
+.evb-soft-wrapper .evb-form-title { margin: 0 0 20px; font-size: 21px; font-weight: 900; line-height: 1.35; }
+.evb-soft-wrapper .evb-field { margin-bottom: 18px; }
+.evb-soft-wrapper label {
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+.evb-soft-wrapper input[type="number"],
+.evb-soft-wrapper select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-family: system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: #1a1a2e;
+    background: #fffef5;
+    border: 3px solid var(--neo-border);
+    border-radius: 14px;
+    outline: none;
+}
+.evb-soft-wrapper select { font-weight: 600; font-size: 15px; }
+.evb-soft-wrapper input:focus, .evb-soft-wrapper select:focus { background: #fdfde8; }
+.evb-soft-wrapper .evb-hint { display: block; margin-top: 7px; font-size: 13px; line-height: 1.55; color: #4b5563; }
+.evb-soft-wrapper .evb-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.evb-soft-wrapper .evb-meter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.evb-soft-wrapper .evb-meter-grid .evb-field { margin-bottom: 8px; }
+
+.evb-soft-wrapper .evb-radio-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.evb-soft-wrapper .evb-radio {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14.5px; font-weight: 700; text-transform: none; letter-spacing: 0; margin: 0; cursor: pointer;
+    background: #f4f6f5; border: 2px solid var(--neo-border); border-radius: 999px; padding: 9px 16px;
+}
+.evb-soft-wrapper .evb-radio input { width: 18px; height: 18px; accent-color: #b8860b; margin: 0; }
+
+.evb-soft-wrapper .evb-btn-calc {
+    width: 100%;
+    margin-top: 4px;
+    padding: 17px 20px;
+    font-size: 19px;
+    font-weight: 900;
+    color: #1c2430;
+    background: var(--clr-yellow);
+    border: 3px solid var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+    cursor: pointer;
+    transition: transform 0.06s, box-shadow 0.06s;
+}
+.evb-soft-wrapper .evb-btn-calc:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #1c2430; }
+.evb-soft-wrapper .evb-btn-calc:active { transform: translate(4px, 4px); box-shadow: 0 0 0 #1c2430; }
+.evb-soft-wrapper .evb-form-note { margin: 14px 0 0; font-size: 13.5px; line-height: 1.6; color: #4b5563; text-align: center; }
+
+.evb-soft-wrapper .evb-results { display: flex; flex-direction: column; gap: 18px; }
+.evb-soft-wrapper .evb-verdict {
+    background: #eef7f0;
+    border: 3px solid var(--neo-border);
+    border-left: 10px solid #2d6a4f;
+    border-radius: 18px;
+    box-shadow: var(--neo-shadow);
+    padding: 17px 21px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #1f2937;
+}
+.evb-soft-wrapper .evb-verdict strong { color: #111827; }
+
+.evb-soft-wrapper .evb-stat {
+    border: 3px solid var(--neo-border);
+    border-radius: 18px;
+    padding: 16px 20px;
+}
+.evb-soft-wrapper .evb-stat-main {
+    background: var(--clr-yellow);
+    box-shadow: var(--neo-shadow);
+    padding: 20px 24px;
+}
+.evb-soft-wrapper .evb-stat-main .evb-stat-value { font-size: 42px; }
+.evb-soft-wrapper .evb-stat-main .evb-stat-label { font-size: 14px; }
+.evb-soft-wrapper .evb-substats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.evb-soft-wrapper .evb-substats .evb-stat { background: #ffffff; box-shadow: 3px 3px 0 #1c2430; }
+.evb-soft-wrapper .evb-substats .evb-stat-value { font-size: 21px; }
+.evb-soft-wrapper .evb-stat-label {
+    display: block; font-size: 12.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 6px; color: #374151;
+}
+.evb-soft-wrapper .evb-stat-line { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.evb-soft-wrapper .evb-stat-value {
+    font-family: system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-weight: 900; line-height: 1.1; color: #111827;
+}
+.evb-soft-wrapper .evb-stat-unit { font-size: 13px; font-weight: 700; color: #4b5563; white-space: nowrap; }
+
+.evb-soft-wrapper .evb-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.evb-soft-wrapper .evb-pill {
+    background: #f4f6f5;
+    border: 2px solid var(--neo-border);
+    border-radius: 999px;
+    padding: 8px 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #374151;
+}
+.evb-soft-wrapper .evb-pill strong { color: #111827; font-variant-numeric: tabular-nums; }
+
+.evb-soft-wrapper .evb-viz-card, .evb-soft-wrapper .evb-acc {
+    background: #ffffff;
+    border: 3px solid var(--neo-border);
+    border-radius: 20px;
+    box-shadow: var(--neo-shadow);
+    padding: 22px 24px;
+}
+.evb-soft-wrapper .evb-viz-card h3 { margin: 0 0 16px; font-size: 18px; font-weight: 900; }
+.evb-soft-wrapper .evb-tier-row { margin-bottom: 16px; }
+.evb-soft-wrapper .evb-tier-row:last-child { margin-bottom: 4px; }
+.evb-soft-wrapper .evb-tier-head { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; }
+.evb-soft-wrapper .evb-tier-head strong { font-size: 15px; }
+.evb-soft-wrapper .evb-tier-head span { color: #4b5563; font-variant-numeric: tabular-nums; }
+.evb-soft-wrapper .evb-tier-track {
+    height: 24px;
+    background: #f4f4ee;
+    border: 2px solid var(--neo-border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.evb-soft-wrapper .evb-tier-fill { height: 100%; border-radius: 999px; transition: width 0.35s ease; }
+.evb-soft-wrapper .evb-tier-calc { margin-top: 6px; font-size: 14px; color: #374151; font-variant-numeric: tabular-nums; }
+.evb-soft-wrapper .evb-tier-calc strong { color: #111827; }
+.evb-soft-wrapper .evb-bar-note { margin: 12px 0 0; font-size: 13.5px; line-height: 1.6; color: #4b5563; }
+
+.evb-soft-wrapper .evb-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.evb-soft-wrapper .evb-btn {
+    display: inline-block;
+    padding: 13px 20px;
+    font-size: 15.5px; font-weight: 800;
+    color: #111111; text-decoration: none;
+    background: var(--clr-yellow);
+    border: 3px solid var(--neo-border);
+    border-radius: 14px;
+    box-shadow: 3px 3px 0 #1c2430;
+    cursor: pointer;
+    transition: transform 0.05s, box-shadow 0.05s;
+}
+.evb-soft-wrapper .evb-btn-alt { background: var(--clr-green); }
+.evb-soft-wrapper .evb-btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 #1c2430; }
+
+.evb-soft-wrapper .evb-acc summary { font-size: 16.5px; font-weight: 900; cursor: pointer; }
+.evb-soft-wrapper .evb-acc-body { margin-top: 16px; }
+.evb-soft-wrapper .evb-table { width: 100%; border-collapse: collapse; font-size: 14.5px; margin-bottom: 14px; }
+.evb-soft-wrapper .evb-table th, .evb-soft-wrapper .evb-table td {
+    padding: 9px 10px; border-bottom: 2px solid #e5e7eb; text-align: left; vertical-align: top;
+}
+.evb-soft-wrapper .evb-table th { font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 3px solid var(--neo-border); }
+.evb-soft-wrapper .evb-table .evb-num { font-variant-numeric: tabular-nums; font-weight: 700; text-align: right; white-space: nowrap; }
+.evb-soft-wrapper .evb-table th:last-child { text-align: right; }
+.evb-soft-wrapper .evb-legal { margin: 0; padding-left: 20px; }
+.evb-soft-wrapper .evb-legal li { font-size: 13.5px; line-height: 1.65; margin-bottom: 7px; }
+
+@media (max-width: 640px) {
+    .evb-soft-wrapper .evb-form-card { padding: 20px; }
+    .evb-soft-wrapper .evb-form-grid, .evb-soft-wrapper .evb-meter-grid { grid-template-columns: 1fr; }
+    .evb-soft-wrapper .evb-substats { grid-template-columns: 1fr; }
+    .evb-soft-wrapper .evb-stat-main .evb-stat-value { font-size: 34px; }
+    .evb-soft-wrapper .evb-btn-calc { font-size: 17px; }
+}
