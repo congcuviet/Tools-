@@ -1,0 +1,107 @@
+.bcryp-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f4f4f5;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-green: #06d6a0;
+    --clr-red: #ef476f;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+
+    max-width: 950px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.bcryp-soft-wrapper * { box-sizing: border-box; }
+
+.bcryp-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.bcryp-soft-header h2 { margin: 0 0 10px 0; font-size: 1.7rem; font-weight: 900; color: var(--clr-green); text-transform: uppercase;}
+.bcryp-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* BỐ CỤC 2 CỘT */
+.bcryp-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.bcryp-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px;}
+@media (min-width: 768px) { .bcryp-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* CARDS */
+.bcryp-card {
+    padding: 20px; border: var(--neo-border); 
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%;
+}
+.bcryp-bg-yellow { background: var(--clr-yellow); }
+.bcryp-bg-white { background: var(--clr-white); }
+.bcryp-bg-cyan { background: var(--clr-cyan) !important; color: #111 !important;}
+.bcryp-card-title { margin: 0 0 15px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed #111; padding-bottom: 10px; }
+
+/* INPUTS */
+.bcryp-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 8px; }
+.bcryp-label { font-weight: 900; font-size: 0.95rem; }
+.bcryp-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+.bcryp-input {
+    width: 100%; padding: 12px; border: 2px solid #111; border-radius: 8px;
+    font-size: 1.1rem; font-weight: bold; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); font-family: monospace;
+}
+.bcryp-input:focus { border-color: var(--clr-cyan); }
+
+.bcryp-textarea {
+    width: 100%; min-height: 80px; padding: 12px; border: 2px solid #111; border-radius: 8px;
+    font-size: 1rem; font-weight: bold; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); font-family: monospace; resize: vertical;
+}
+
+.bcryp-num-input { width: 70px; padding: 6px; border: 2px solid #111; border-radius: 6px; font-weight: 900; font-size: 1rem; text-align: center; outline: none; box-shadow: 2px 2px 0px #111;}
+.bcryp-range { -webkit-appearance: none; width: 100%; height: 10px; background: #fff; border: 2px solid #111; border-radius: 5px; outline: none; margin-top: 5px;}
+.bcryp-range::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; background: #111; border-radius: 50%; cursor: pointer; }
+.bcryp-hint { font-size: 0.8rem; color: #555; font-weight: 700; font-style: italic; }
+
+/* BUTTONS */
+.bcryp-btn-main {
+    width: 100%; padding: 15px; background: #111; color: var(--clr-yellow);
+    border: 2px solid #111; border-radius: 8px; font-size: 1.1rem; font-weight: 900;
+    cursor: pointer; box-shadow: 4px 4px 0px #111; transition: 0.1s; text-transform: uppercase; margin-top: 10px;
+}
+.bcryp-btn-main:active { transform: translate(4px, 4px); box-shadow: 0px 0px 0px #111; }
+.bcryp-btn-main:disabled { opacity: 0.7; cursor: wait; transform: none; box-shadow: 4px 4px 0px #111; }
+
+/* KẾT QUẢ GEN */
+.bcryp-textarea-res {
+    width: 100%; height: 70px; padding: 12px; border: 2px solid #111; border-radius: 8px;
+    font-size: 1.1rem; font-weight: 900; background: #fff; color: #111; font-family: monospace; resize: none; outline: none;
+}
+.bcryp-btn-copy {
+    width: 100%; padding: 10px; background: #fff; border: 2px solid #111; border-radius: 8px; margin-top: 8px;
+    font-size: 1rem; font-weight: 900; cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s;
+}
+.bcryp-btn-copy:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* KẾT QUẢ KIỂM TRA (VERIFY STATUS) */
+.bcryp-status-box {
+    margin-top: 20px; padding: 20px; border: 3px solid #111; border-radius: 10px; text-align: center;
+    box-shadow: 4px 4px 0px #111; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.bcryp-status-icon { font-size: 3rem; line-height: 1; }
+.bcryp-status-text { font-size: 1.2rem; font-weight: 900; text-transform: uppercase; }
+
+.bcryp-status-match { background: var(--clr-green); color: #111; }
+.bcryp-status-fail { background: var(--clr-red); color: #fff; }
+.bcryp-status-loading { background: #eee; color: #555; }
+
+/* INFO BOX */
+.bcryp-info-box { background: #e0fbfc; padding: 15px; border: 2px dashed #111; border-radius: 12px; box-shadow: 3px 3px 0px #111; }
+.bcryp-info-box h4 { margin: 0 0 5px 0; font-weight: 900; color: #111; }
+.bcryp-info-box p { margin: 0; font-size: 0.9rem; font-weight: 600; line-height: 1.5; }
+.bcryp-info-box code { background: rgba(0,0,0,0.1); padding: 2px 6px; border-radius: 4px; font-weight: bold; }
