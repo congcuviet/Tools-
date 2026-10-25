@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+/* Lệnh ẩn hiển thị dùng chung cho toàn hệ thống */
+.hidden { display: none !important; }
+
+.pt-neo-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 1200px; margin: 20px auto;
+    border: 3px solid #000; border-radius: 12px;
+    box-shadow: 8px 8px 0px #000; padding: 25px;
+    background: #fff; color: #000; box-sizing: border-box;
+    position: relative;
+}
+.pt-neo-wrapper * { box-sizing: border-box; }
+
+.pt-header {
+    background: #b5ead7; padding: 15px 20px; border-radius: 12px;
+    border: 3px solid #000; box-shadow: 4px 4px 0px #000; margin-bottom: 20px; text-align: center;
+}
+.pt-header h2 { margin: 0 0 5px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase; }
+.pt-header p { margin: 0; font-weight: 800; font-size: 0.95rem; }
+
+/* LEGEND */
+.pt-legend { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 3px dashed #000;}
+.lg-item { border: 2px solid #000; padding: 6px 15px; border-radius: 20px; font-weight: 900; font-size: 0.9rem; box-shadow: 2px 2px 0px #000; }
+
+/* LOADING SPINNER */
+.pt-loader { text-align: center; padding: 50px 20px; font-weight: 900; font-size: 1.2rem; }
+.pt-spinner { width: 50px; height: 50px; border: 5px solid #f4f4f4; border-top: 5px solid #ff595e; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px; box-shadow: 0 0 0 2px #000; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* GRID BẢNG TUẦN HOÀN */
+.pt-grid { display: grid; grid-template-columns: 30px repeat(18, minmax(48px, 1fr)); gap: 6px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 10px; animation: ptFadeIn 0.4s ease-out; }
+
+.pt-header-col { font-weight: 900; font-size: 0.9rem; text-align: center; align-self: end; padding-bottom: 5px; color: #444; }
+.pt-header-row { font-weight: 900; font-size: 1rem; text-align: center; align-self: center; color: #444; padding-right: 5px; }
+
+.pt-cell {
+    border: 2px solid #000; border-radius: 6px; padding: 4px;
+    cursor: pointer; box-shadow: 2px 2px 0px #000; transition: 0.1s;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    aspect-ratio: 1 / 1.1; background: #eee; position: relative;
+}
+.pt-cell:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0px #000; filter: brightness(1.1); z-index: 5; }
+.pt-cell.active { border-color: #ff595e; border-width: 3px; transform: scale(1.15); box-shadow: 4px 4px 0px #ff595e; z-index: 10; }
+
+.pt-num { font-size: 0.7rem; font-weight: 900; align-self: flex-start; }
+.pt-sym { font-size: 1.3rem; font-weight: 900; font-family: monospace; }
+.pt-mass { font-size: 0.65rem; font-weight: 700; color: #333; margin-top: 2px; }
+
+/* HOVER TOOLTIP (POPUP NHỎ) */
+.el-tooltip {
+    position: fixed; z-index: 9999; background: #fff; border: 3px solid #000;
+    border-radius: 8px; padding: 12px 15px; box-shadow: 4px 4px 0px #000;
+    pointer-events: none; width: max-content; max-width: 250px;
+    transform: translate(-50%, calc(-100% - 15px)); 
+    opacity: 0; visibility: hidden; transition: opacity 0.2s ease;
+}
+.el-tooltip.visible { opacity: 1; visibility: visible; }
+.el-tooltip h4 { margin: 0 0 5px 0; font-size: 1.2rem; font-weight: 900; text-transform: uppercase; border-bottom: 2px dashed #ccc; padding-bottom: 5px;}
+.el-tooltip p { margin: 3px 0; font-weight: 700; font-size: 0.95rem; color: #333;}
+.el-tooltip b { color: #000; font-weight: 900;}
+
+/* KHU VỰC CHI TIẾT (RENDER KHI CLICK) */
+.pt-details-area { border-top: 3px dashed #000; padding-top: 25px; animation: ptFadeIn 0.3s ease-out; }
+@keyframes ptFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* KHUNG THÔNG TIN NGUYÊN TỐ (BẢNG TO) */
+.el-card { background: #fdfd96; border: 3px solid #000; border-radius: 12px; padding: 20px; box-shadow: 5px 5px 0px #000; margin-bottom: 25px; }
+.el-card-header { display: flex; align-items: center; gap: 20px; margin-bottom: 15px; border-bottom: 2px dashed #000; padding-bottom: 15px; }
+.el-card-sym { font-size: 3.5rem; font-weight: 900; font-family: monospace; color: #ff595e; background: #fff; padding: 10px 20px; border: 3px solid #000; border-radius: 8px; box-shadow: 3px 3px 0px #000; }
+.el-card-title h3 { margin: 0 0 5px 0; font-size: 1.8rem; text-transform: uppercase; font-weight: 900; }
+.el-card-title p { margin: 0; font-size: 1.1rem; font-weight: 700; }
+
+.el-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.el-info-item { background: #fff; border: 2px solid #000; padding: 10px 15px; border-radius: 6px; font-weight: 700; box-shadow: 2px 2px 0px #000; }
+
+/* KHUNG LIÊN KẾT CHẤT VÀ PHƯƠNG TRÌNH */
+.link-section { background: #e2f0cb; border: 3px solid #000; border-radius: 12px; padding: 20px; box-shadow: 5px 5px 0px #000; margin-bottom: 20px; position: relative;}
+.link-section h4 { margin: 0 0 15px 0; font-size: 1.3rem; font-weight: 900; text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: 10px; }
+
+.link-loading { font-weight: 900; color: #ff595e; text-align: center; padding: 10px; font-size: 1.1rem; animation: pulse 1s infinite alternate;}
+@keyframes pulse { from { opacity: 0.5; } to { opacity: 1; } }
+
+.link-list { list-style: none; padding: 0; margin: 0; max-height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 5px;}
+.link-list li { background: #fff; border: 2px solid #000; border-radius: 6px; padding: 12px; display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 1.1rem; box-shadow: 2px 2px 0px #000; }
+.link-form { font-family: monospace; color: #ff595e; font-size: 1.2rem; }
+.btn-copy-pt { background: #ffca3a; border: 2px solid #000; border-radius: 6px; padding: 5px 12px; font-weight: 900; cursor: pointer; box-shadow: 2px 2px 0px #000; transition: 0.1s; flex-shrink: 0; }
+.btn-copy-pt:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #000; }
+
+#toastPt { visibility: hidden; background-color: #000; color: #fff; text-align: center; border-radius: 8px; padding: 12px 20px; position: fixed; z-index: 9999; bottom: 30px; left: 50%; transform: translateX(-50%); font-weight: bold; opacity: 0; transition: 0.3s; }
+#toastPt.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+@media (max-width: 600px) {
+    .el-card-header { flex-direction: column; align-items: flex-start; }
+    .link-list li { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .btn-copy-pt { width: 100%; }
+    .el-tooltip { display: none !important; } /* Tắt tooltip hover trên điện thoại */
+}
