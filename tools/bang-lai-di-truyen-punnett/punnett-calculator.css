@@ -1,0 +1,110 @@
+/* Khai báo biến nội bộ */
+.punnett-neo-wrapper {
+    --bg-white: #ffffff;
+    --border-ink: 3px solid #111111;
+    --shadow-solid: 5px 5px 0px #111111;
+    --shadow-push: 2px 2px 0px #111111;
+    
+    /* Palette Sinh học */
+    --clr-mint: #a3e635;        /* Xanh nõn chuối */
+    --clr-mint-light: #d9f99d; 
+    --clr-purple: #c084fc;      /* Tím Mendel */
+    --clr-purple-light: #e9d5ff;
+    --clr-blue-light: #bae6fd;
+    --clr-danger: #ff4d4d;
+
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111111;
+    background: #fdfdfd;
+    padding: 20px;
+    border: var(--border-ink);
+    border-radius: 16px;
+    box-shadow: 8px 8px 0px #111;
+}
+
+.punnett-neo-wrapper * { box-sizing: border-box; }
+
+/* Header */
+.punnett-neo-header { background: var(--clr-mint); border: var(--border-ink); box-shadow: var(--shadow-solid); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; }
+.punnett-neo-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; }
+.punnett-neo-header p { margin: 0; font-weight: 600; font-size: 0.95rem; }
+
+/* Form Styles */
+.punnett-neo-form { display: flex; flex-direction: column; gap: 20px; }
+.punnett-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.punnett-group { display: flex; flex-direction: column; gap: 8px; }
+.punnett-group label { font-weight: 800; font-size: 1.05rem; }
+
+.punnett-neo-wrapper input[type="text"] {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    border: var(--border-ink);
+    border-radius: 12px;
+    background: var(--bg-white);
+    box-shadow: 4px 4px 0px #111;
+    outline: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.punnett-neo-wrapper input[type="text"]:focus { box-shadow: var(--shadow-solid); background: var(--clr-blue-light); }
+
+/* Buttons & Quick Actions */
+.punnett-quick-actions p { margin: 0 0 10px 0; font-size: 0.9rem; }
+.quick-btn-group { display: flex; flex-wrap: wrap; gap: 10px; }
+.quick-btn {
+    background: #fff; border: 2px solid #111; padding: 8px 15px; border-radius: 20px;
+    font-size: 0.85rem; font-weight: 700; cursor: pointer; box-shadow: 3px 3px 0px #111;
+    transition: all 0.1s;
+}
+.quick-btn:hover { background: var(--clr-mint-light); }
+.quick-btn:active { box-shadow: 1px 1px 0px #111; transform: translate(2px, 2px); }
+
+/* Submit Button */
+.punnett-neo-btn {
+    padding: 18px; font-size: 1.2rem; font-weight: 900; background: var(--clr-purple); color: #111;
+    border: var(--border-ink); border-radius: 12px; box-shadow: var(--shadow-solid);
+    cursor: pointer; text-transform: uppercase; margin-top: 10px; transition: all 0.1s;
+}
+.punnett-neo-btn:hover { background: #a855f7; }
+.punnett-neo-btn:active { box-shadow: var(--shadow-push); transform: translate(3px, 3px); }
+
+/* Alerts */
+.punnett-error-alert { background: var(--clr-danger); color: #fff; border: var(--border-ink); padding: 12px; border-radius: 8px; font-weight: 700; text-align: center; }
+
+/* Result Area */
+.punnett-neo-result { margin-top: 30px; padding-top: 30px; border-top: 4px dashed #111; }
+.punnett-neo-result.active { display: block !important; animation: punnettPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+.result-title { text-align: center; font-size: 1.3rem; text-transform: uppercase; margin: 0 0 15px 0;}
+
+/* Bảng Brutalism */
+.punnett-table-container { background: #fff; border: var(--border-ink); box-shadow: var(--shadow-solid); border-radius: 12px; padding: 20px; margin-bottom: 25px; }
+.table-scroll { width: 100%; overflow-x: auto; }
+.punnett-brutal-table { width: 100%; border-collapse: collapse; text-align: center; min-width: 400px; }
+.punnett-brutal-table th, .punnett-brutal-table td { border: 3px solid #111; padding: 15px; font-size: 1.3rem; font-weight: 800; }
+.punnett-brutal-table th { background: #111; color: #fff; }
+.punnett-brutal-table .gamete-header { background: var(--clr-blue-light); color: #111; }
+.punnett-brutal-table td { background: var(--bg-white); }
+/* Hiệu ứng hover ô trên bảng */
+.punnett-brutal-table td:hover { background: var(--clr-mint-light); cursor: crosshair; }
+
+/* Stats */
+.punnett-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.stat-box { background: #fff; border: var(--border-ink); box-shadow: 4px 4px 0px #111; border-radius: 12px; padding: 20px; }
+.box-genotype { background: var(--clr-mint-light); }
+.box-phenotype { background: var(--clr-purple-light); }
+.stat-box h4 { margin: 0 0 15px 0; font-size: 1.1rem; border-bottom: 2px solid #111; padding-bottom: 5px; }
+.stat-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 1.05rem; font-weight: 700; }
+.stat-list li { display: flex; justify-content: space-between; padding: 8px 10px; background: rgba(255,255,255,0.6); border: 2px solid #111; border-radius: 6px; }
+.note-pheno { display: block; margin-top: 15px; font-size: 0.8rem; font-weight: 600; color: #444; }
+
+@keyframes punnettPop { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 650px) {
+    .punnett-form-grid, .punnett-stats-grid { grid-template-columns: 1fr; gap: 15px; }
+}
