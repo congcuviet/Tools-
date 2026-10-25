@@ -1,0 +1,76 @@
+/* Biến nội bộ Neo-Brutalism */
+.clock-neo-wrapper {
+    --border-ink: 3px solid #111111;
+    --shadow-solid: 6px 6px 0px #111111;
+    --bg-main: #f8f9fa;
+    --clr-accent: #4cc9f0;
+    --clr-yellow: #ffca3a;
+    --clr-red: #ff595e;
+    --clr-green: #8ac926;
+    --clr-night: #2b2d42;
+
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--border-ink);
+    border-radius: 16px;
+    box-shadow: 10px 10px 0px #111;
+}
+
+.clock-neo-wrapper * { box-sizing: border-box; }
+
+.clock-neo-header { background: var(--clr-accent); color: #111; border: var(--border-ink); box-shadow: var(--shadow-solid); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; }
+.clock-neo-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.clock-neo-header p { margin: 0; font-weight: 800; font-size: 0.95rem; }
+
+/* GIỜ ĐỊA PHƯƠNG BANNER */
+.local-clock-card { display: flex; justify-content: space-between; align-items: center; background: var(--clr-yellow); border: var(--border-ink); border-radius: 12px; padding: 20px 25px; box-shadow: var(--shadow-solid); margin-bottom: 25px; flex-wrap: wrap; gap: 15px;}
+.local-badge { background: #111; color: #fff; font-weight: 900; font-size: 0.8rem; padding: 4px 10px; border-radius: 20px; text-transform: uppercase;}
+.local-info h3 { margin: 8px 0 4px 0; font-size: 1.6rem; font-weight: 900;}
+.local-info p { margin: 0; font-weight: 800; font-size: 1rem; color: #333;}
+.local-time-display { font-size: 3.2rem; font-weight: 900; font-family: monospace, system-ui; letter-spacing: -1px;}
+
+/* BẢNG ĐIỀU KHIỂN */
+.clock-controls { background: #fff; border: var(--border-ink); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-solid); margin-bottom: 30px;}
+.clock-group label { display: block; font-weight: 900; font-size: 1.05rem; margin-bottom: 10px; text-transform: uppercase;}
+.add-city-row { display: flex; gap: 15px; }
+
+.neo-select { flex: 1; padding: 14px; font-size: 1.1rem; font-weight: 800; border: var(--border-ink); border-radius: 10px; background: #fff; box-shadow: 3px 3px 0px #111; outline: none; cursor: pointer;}
+.neo-select:focus { background: #e0fbfc; }
+
+.clock-neo-btn { padding: 14px 25px; font-size: 1.1rem; font-weight: 900; background: #111; color: #fff; border: var(--border-ink); border-radius: 10px; box-shadow: 4px 4px 0px var(--clr-green); cursor: pointer; text-transform: uppercase; transition: all 0.1s; white-space: nowrap;}
+.clock-neo-btn:active { box-shadow: 1px 1px 0px var(--clr-green); transform: translate(3px, 3px); }
+
+/* LƯỚI THÀNH PHỐ THẾ GIỚI */
+.clock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+
+.city-card { position: relative; background: #fff; border: var(--border-ink); border-radius: 12px; padding: 20px; box-shadow: 4px 4px 0px #111; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; transition: transform 0.1s;}
+.city-card:hover { transform: translateY(-3px); box-shadow: 6px 6px 0px #111;}
+
+/* Style đặc biệt cho Ban đêm */
+.city-card.is-night { background: var(--clr-night); color: #fff; }
+.city-card.is-night .city-date, .city-card.is-night .diff-tag { color: #ccc; }
+.city-card.is-night .btn-remove { background: #fff; color: #111; }
+
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.city-title { font-size: 1.25rem; font-weight: 900; margin: 0; line-height: 1.2;}
+.btn-remove { background: #111; color: #fff; border: 2px solid #111; border-radius: 6px; width: 28px; height: 28px; font-weight: 900; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;}
+
+.city-time { font-size: 2.3rem; font-weight: 900; font-family: monospace, system-ui; margin: 5px 0;}
+.city-date { font-weight: 800; font-size: 0.9rem; color: #555;}
+
+.card-bottom { display: flex; justify-content: space-between; align-items: center; border-top: 2px dashed rgba(0,0,0,0.15); padding-top: 10px; margin-top: 5px;}
+.city-card.is-night .card-bottom { border-top-color: rgba(255,255,255,0.2); }
+
+.daynight-icon { font-size: 1.4rem; }
+.diff-tag { font-size: 0.85rem; font-weight: 900; background: rgba(0,0,0,0.06); padding: 4px 8px; border-radius: 6px;}
+.city-card.is-night .diff-tag { background: rgba(255,255,255,0.15); }
+
+@media (max-width: 650px) {
+    .local-clock-card { flex-direction: column; text-align: center; }
+    .add-city-row { flex-direction: column; }
+    .local-time-display { font-size: 2.5rem; }
+}
