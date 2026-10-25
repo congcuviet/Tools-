@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+.converter-neo-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 1000px; /* Rộng rãi thoáng đãng */
+    margin: 20px auto;
+    border: 3px solid #000000;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0px #000000;
+    padding: 25px;
+    background: #ffffff;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.converter-neo-wrapper * { box-sizing: border-box; }
+
+.converter-neo-header {
+    background: #fdfd96; padding: 15px 20px; border-radius: 12px;
+    border: 3px solid #000000; box-shadow: 4px 4px 0px #000000; margin-bottom: 25px; text-align: center;
+}
+.converter-neo-header h2 { margin: 0 0 5px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase; color: #000000; }
+.converter-neo-header p { margin: 0; font-weight: 800; font-size: 0.95rem; color: #000000; }
+
+/* TABS */
+.converter-tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.tab-btn {
+    flex: 1; text-align: center; padding: 12px; font-weight: 900; font-size: 1.05rem;
+    border: 3px solid #000000; border-radius: 8px; background: #e9ecef; color: #000000;
+    cursor: pointer; box-shadow: 3px 3px 0px #000000; transition: all 0.1s; text-transform: uppercase; min-width: 120px;
+}
+.tab-btn.active { background: #b5ead7; box-shadow: 1px 1px 0px #000000; transform: translate(2px, 2px); }
+
+/* INPUT AREA */
+.converter-input-area {
+    display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap;
+    background: #f9f9f9; padding: 20px; border: 3px solid #000000; border-radius: 8px;
+}
+.neo-input-text {
+    flex: 2; min-width: 200px; padding: 15px; font-size: 1.3rem; font-weight: 900; font-family: monospace;
+    border-radius: 8px; border: 3px solid #000000; background: #fff; color: #000000;
+    outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); transition: 0.1s;
+}
+.neo-input-text:focus { border-color: #ff595e; }
+.neo-select-unit {
+    flex: 1; min-width: 150px; padding: 15px; font-size: 1.1rem; font-weight: 900;
+    border-radius: 8px; border: 3px solid #000000; background: #ffdac1; color: #000000;
+    outline: none; box-shadow: 4px 4px 0px #000000; cursor: pointer;
+}
+
+.converter-info {
+    background: #e2f0cb; padding: 12px 20px; border: 3px dashed #000000; border-radius: 8px;
+    font-weight: 700; font-size: 0.95rem; color: #000000; margin-bottom: 25px;
+}
+
+/* RESULTS GRID */
+.converter-results {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;
+}
+
+/* CARD GIAO DIỆN KẾT QUẢ */
+.result-card {
+    border: 3px solid #000000; border-radius: 12px; padding: 20px;
+    box-shadow: 5px 5px 0px #000000; display: flex; flex-direction: column; justify-content: space-between;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.result-card:hover { transform: translateY(-3px); box-shadow: 8px 8px 0px #000000; }
+.card-unit-name { font-weight: 900; font-size: 1.2rem; color: #000000; border-bottom: 3px dashed #000000; padding-bottom: 8px; margin-bottom: 12px; text-transform: uppercase; }
+.card-value { font-family: 'Bungee', monospace, sans-serif; font-size: 1.8rem; color: #000000; word-break: break-all; margin-bottom: 20px; line-height: 1.2; text-shadow: 1px 1px 0px #fff; }
+
+.card-actions { display: flex; gap: 10px; }
+.btn-card {
+    flex: 1; padding: 10px; font-weight: 900; border: 2px solid #000000; border-radius: 6px;
+    background: #ffffff; color: #000000; cursor: pointer; font-size: 0.95rem; text-transform: uppercase;
+    box-shadow: 3px 3px 0px #000000; transition: 0.1s;
+}
+.btn-card:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #000000; }
+.btn-card.swap-btn { background: #cbaacb; }
+
+#toastConverter {
+    visibility: hidden; min-width: 200px; background-color: #000000; color: #ffffff;
+    text-align: center; border-radius: 8px; padding: 12px; position: fixed; z-index: 9999;
+    bottom: 30px; left: 50%; transform: translateX(-50%); font-weight: bold; opacity: 0; transition: opacity 0.3s, bottom 0.3s;
+}
+#toastConverter.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+@media (max-width: 600px) {
+    .converter-input-area { flex-direction: column; }
+    .card-value { font-size: 1.5rem; }
+}
