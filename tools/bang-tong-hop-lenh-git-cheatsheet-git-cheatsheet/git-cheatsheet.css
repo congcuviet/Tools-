@@ -1,0 +1,109 @@
+.gitc-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f4f4f5;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-red: #ff006e;
+    --clr-green: #06d6a0;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+    --clr-purple: #9b5de5;
+
+    max-width: 1200px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.gitc-soft-wrapper * { box-sizing: border-box; }
+
+.gitc-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 20px; box-shadow: var(--neo-shadow);
+}
+.gitc-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-cyan); text-transform: uppercase;}
+.gitc-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* THANH TÌM KIẾM */
+.gitc-search-wrapper {
+    display: flex; gap: 10px; margin-bottom: 25px;
+}
+.gitc-search-input {
+    flex: 1; padding: 15px 20px; border: 3px solid #111; border-radius: 8px;
+    font-size: 1.1rem; font-weight: 900; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); background: #fff;
+}
+.gitc-search-input:focus { border-color: var(--clr-purple); }
+
+.gitc-btn-clear {
+    background: #fff; color: var(--clr-red); padding: 0 20px; border: 3px solid #111; border-radius: 8px;
+    font-size: 1rem; font-weight: 900; cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s;
+}
+.gitc-btn-clear:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+/* LAYOUT LƯỚI CARDS (MASONRY-LIKE) */
+.gitc-grid-layout {
+    display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start;
+}
+@media (min-width: 768px) {
+    .gitc-grid-layout { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+    .gitc-grid-layout { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* CARD DANH MỤC */
+.gitc-category-card {
+    background: #fff; border: var(--neo-border); border-radius: 12px;
+    box-shadow: var(--neo-shadow); overflow: hidden; display: flex; flex-direction: column;
+}
+.gitc-category-title {
+    background: #111; color: var(--clr-yellow); padding: 15px; margin: 0;
+    font-size: 1.1rem; font-weight: 900; text-transform: uppercase; border-bottom: 3px solid #111;
+}
+
+/* TỪNG ITEM LỆNH GIT */
+.gitc-cmd-list {
+    display: flex; flex-direction: column; padding: 10px; gap: 10px; background: #fdfdfd;
+}
+.gitc-cmd-item {
+    background: #fff; border: 2px solid #111; border-radius: 8px; padding: 12px;
+    display: flex; flex-direction: column; gap: 10px; transition: 0.2s;
+}
+.gitc-cmd-item:hover { background: #f0f4f8; }
+
+.gitc-cmd-header {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+}
+.gitc-cmd-code {
+    background: rgba(155, 93, 229, 0.1); border: 1px solid var(--clr-purple); color: #111;
+    padding: 4px 8px; border-radius: 6px; font-family: monospace; font-size: 0.95rem; font-weight: bold; word-break: break-all;
+}
+.gitc-cmd-desc {
+    margin: 0; font-size: 0.9rem; color: #555; font-weight: 600; line-height: 1.4;
+}
+
+.gitc-btn-copy-cmd {
+    background: #111; color: var(--clr-cyan); padding: 4px 10px; border: 2px solid #111; border-radius: 6px;
+    font-size: 0.8rem; font-weight: 900; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; white-space: nowrap; flex-shrink: 0;
+}
+.gitc-btn-copy-cmd:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* THÔNG BÁO KHÔNG CÓ KẾT QUẢ */
+.gitc-no-result {
+    text-align: center; padding: 30px; background: rgba(255, 0, 110, 0.1); border: 2px dashed var(--clr-red);
+    border-radius: 12px; font-weight: 900; color: #a00; font-size: 1.1rem;
+}
+
+/* INFO BOX */
+.gitc-info-box { background: rgba(255,255,255,0.6); padding: 15px; border: 2px dashed #111; border-radius: 8px; margin-top: 20px;}
+.gitc-info-box h4 { margin: 0 0 8px 0; font-weight: 900; color: #111; font-size: 1rem;}
+.gitc-info-box p { margin: 0; font-size: 0.9rem; font-weight: 600; line-height: 1.6; color: #333;}
