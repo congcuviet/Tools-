@@ -18,6 +18,16 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Gõ tiếng Việt trực tuyến (Telex/VNI) — không cần Unikey | [Mở công cụ](https://congcuviet.com/cong-cu/go-tieng-viet-truc-tuyen/) |
 | Tính tiền điện sinh hoạt bậc thang EVN | [Mở công cụ](https://congcuviet.com/cong-cu/tinh-tien-dien-sinh-hoat-bac-thang-evn/) |
 | Tính lãi gửi tiết kiệm ngân hàng | [Mở công cụ](https://congcuviet.com/cong-cu/tinh-lai-gui-tiet-kiem-ngan-hang/) |
+| Băm chuỗi văn bản – Hash text | [Mở công cụ](https://congcuviet.com/cong-cu/bam-chuoi-van-ban-hash-text/) |
+| Băm mật khẩu Bcrypt – Bcrypt | [Mở công cụ](https://congcuviet.com/cong-cu/bam-mat-khau-bcrypt-bcrypt/) |
+| Bản Đồ Múi Giờ / Giờ Thế Giới | [Mở công cụ](https://congcuviet.com/cong-cu/ban-do-mui-gio-gio-the-gioi/) |
+| Bảng Lai Di Truyền Punnett | [Mở công cụ](https://congcuviet.com/cong-cu/bang-lai-di-truyen-punnett/) |
+| Bảng Tính Tan Hoá Học | [Mở công cụ](https://congcuviet.com/cong-cu/bang-tinh-tan-hoa-hoc/) |
+| Bảng tổng hợp lệnh Git (Cheatsheet) – Git cheatsheet | [Mở công cụ](https://congcuviet.com/cong-cu/bang-tong-hop-lenh-git-cheatsheet-git-cheatsheet/) |
+| Bảng tổng hợp Regex – Regex cheatsheet | [Mở công cụ](https://congcuviet.com/cong-cu/bang-tong-hop-regex-regex-cheatsheet/) |
+| Bảng Tra Cứu Mã Di Truyền Tương Tác | [Mở công cụ](https://congcuviet.com/cong-cu/bang-tra-cuu-ma-di-truyen-tuong-tac/) |
+| Bảng Tuần Hoàn Hoá Học | [Mở công cụ](https://congcuviet.com/cong-cu/bang-tuan-hoan-hoa-hoc/) |
+| Bộ chuyển đổi đơn vị đo lường đa năng (Metric, Imperial) | [Mở công cụ](https://congcuviet.com/cong-cu/bo-chuyen-doi-don-vi-do-luong-da-nang-metric-imperial/) |
 
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
