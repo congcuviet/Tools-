@@ -1,0 +1,130 @@
+.vblur-soft-wrapper {
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #fcfcfc;
+    --bg-card: #ffffff;
+    --clr-blue: #4361ee;
+    --clr-crimson: #d90429;
+    --clr-silver: #e9ecef;
+    --clr-warning: #ffb703;
+    --clr-danger: #ffadad;
+
+    max-width: 1050px; /* Nới rộng một chút cho thoải mái */
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.vblur-soft-wrapper * { box-sizing: border-box; }
+
+.vblur-soft-header {
+    background: var(--clr-blue); padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.vblur-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.vblur-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; }
+
+.vblur-body { background: var(--bg-card); padding: 25px; border: var(--neo-border); border-radius: 12px; box-shadow: var(--neo-shadow); }
+
+/* BỐ CỤC 2 CỘT */
+.vblur-main-layout { display: flex; flex-direction: column; gap: 25px; }
+.vblur-col { flex: 1; min-width: 0; }
+@media (min-width: 800px) { .vblur-main-layout { flex-direction: row; align-items: flex-start; } }
+
+.vblur-group { margin-bottom: 20px; }
+.vblur-label { font-weight: 900; font-size: 1rem; margin-bottom: 10px; display: block; }
+.vblur-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* Khung Upload */
+.vblur-upload-box {
+    background: var(--clr-silver); border: 2px dashed #111; border-radius: 12px;
+    padding: 20px; text-align: center; cursor: pointer; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+}
+.vblur-upload-box:hover { filter: brightness(0.95); }
+.vblur-icon { font-size: 2.2rem; }
+.vblur-filename { font-weight: 800; font-size: 0.95rem; word-break: break-all; color: #111; }
+
+/* WORKSPACE CONTAINER */
+.vblur-video-container {
+    position: relative; width: 100%; border-radius: 12px; border: 2px solid #111; 
+    overflow: hidden; background: #000; line-height: 0; user-select: none;
+}
+#vblur-player { width: 100%; height: auto; display: block; pointer-events: auto; }
+
+/* CÁC KHUNG CHỌN (DRAG) */
+#vblur-selectors-wrapper {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
+}
+.vblur-selector {
+    position: absolute; border: 3px dashed var(--clr-crimson); background: rgba(217, 4, 41, 0.2);
+    cursor: move; display: none; /* Mặc định ẩn, JS sẽ check time để hiện */
+    align-items: center; justify-content: center; pointer-events: auto; box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+}
+.vblur-selector.active-sel { background: rgba(255, 183, 3, 0.4); border-color: var(--clr-warning); z-index: 10; }
+.vblur-selector-text {
+    color: #fff; font-weight: bold; font-size: 0.8rem; text-shadow: 1px 1px 2px #000; pointer-events: none;
+}
+.vblur-resizer {
+    position: absolute; right: -5px; bottom: -5px; width: 20px; height: 20px;
+    background: var(--clr-crimson); border: 2px solid #fff; border-radius: 50%; cursor: se-resize;
+}
+.vblur-selector.active-sel .vblur-resizer { background: var(--clr-warning); }
+
+/* TASKS LIST & CARDS */
+.vblur-btn-add {
+    background: var(--clr-warning); border: 2px solid #111; border-radius: 8px; font-weight: 800;
+    padding: 8px 15px; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.vblur-btn-add:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+.vblur-tasks-list { display: flex; flex-direction: column; gap: 15px; max-height: 400px; overflow-y: auto; padding-right: 5px; }
+.vblur-task-card {
+    background: #f8f9fa; border: 2px solid #111; border-radius: 10px; padding: 15px;
+    box-shadow: 3px 3px 0px #111; transition: 0.2s; cursor: pointer;
+}
+.vblur-task-card.active-card { background: #e0fbfc; border-color: var(--clr-blue); box-shadow: 3px 3px 0px var(--clr-blue); }
+
+.vblur-task-header { display: flex; justify-content: space-between; font-weight: 900; margin-bottom: 10px; color: #333;}
+.vblur-task-del { color: #fff; background: var(--clr-crimson); border: 1px solid #111; padding: 2px 8px; border-radius: 6px; cursor: pointer; font-size:0.8rem;}
+
+.vblur-time-row { display: flex; gap: 10px; margin-bottom: 10px; }
+.vblur-time-input {
+    flex: 1; display: flex; align-items: center; gap: 5px; font-size: 0.85rem; font-weight: 700;
+}
+.vblur-time-input input {
+    width: 60px; padding: 5px; border: 2px solid #111; border-radius: 6px; font-weight: bold; text-align: center;
+}
+
+/* Select Box Nhỏ */
+.neo-select-wrapper { position: relative; }
+.neo-select {
+    width: 100%; appearance: none; background: #fff; border: 2px solid #111; border-radius: 8px;
+    padding: 8px 12px; font-family: inherit; font-size: 0.9rem; font-weight: 700;
+    cursor: pointer; outline: none; box-shadow: 2px 2px 0px #111; color: #111;
+}
+.neo-select-wrapper::after { content: "▼"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 0.8rem; color: #111; font-weight: bold; }
+
+.vblur-hint-text { font-size: 0.85rem; font-weight: 600; color: #111; margin-top: 15px; padding: 12px; background: #fff3cd; border-radius: 8px; border: 1px dashed #111;}
+
+/* Nút Submit */
+.vblur-btn-primary {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-blue); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: 0.15s; color: #fff; margin-top: 5px;
+}
+.vblur-btn-primary:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.vblur-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none; background: #ccc; color: #111;}
+
+/* Progress */
+.vblur-status-box { margin-top: 20px; padding: 20px; background: #fff; border: var(--neo-border); border-radius: 12px; text-align: center; box-shadow: 3px 3px 0px #111; }
+.vblur-status-box h4 { margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 900; color: #111; }
+.vblur-progress-bar { width: 100%; height: 24px; background: #eee; border: 2px solid #111; border-radius: 50px; overflow: hidden; }
+.vblur-progress-fill { width: 0%; height: 100%; background: var(--clr-blue); transition: width 0.2s ease; border-right: 2px solid #111;}
