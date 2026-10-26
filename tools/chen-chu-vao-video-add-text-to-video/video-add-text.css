@@ -1,0 +1,112 @@
+.vtxt-soft-wrapper {
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #fcfcfc;
+    --bg-card: #ffffff;
+    --clr-purple: #7209b7;
+    --clr-pink: #f72585;
+    --clr-tangerine: #fca311;
+    --clr-silver: #e9ecef;
+    --clr-danger: #ffadad;
+
+    max-width: 1050px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.vtxt-soft-wrapper * { box-sizing: border-box; }
+
+.vtxt-soft-header {
+    background: var(--clr-purple); padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.vtxt-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.vtxt-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; }
+
+.vtxt-body { background: var(--bg-card); padding: 25px; border: var(--neo-border); border-radius: 12px; box-shadow: var(--neo-shadow); }
+
+/* BỐ CỤC 2 CỘT */
+.vtxt-main-layout { display: flex; flex-direction: column; gap: 25px; }
+.vtxt-col { flex: 1; min-width: 0; }
+@media (min-width: 800px) { .vtxt-main-layout { flex-direction: row; align-items: flex-start; } }
+
+.vtxt-group { margin-bottom: 20px; }
+.vtxt-label { font-weight: 900; font-size: 1rem; margin-bottom: 10px; display: block; }
+.vtxt-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* Khung Upload */
+.vtxt-upload-box {
+    background: var(--clr-pink); border: 2px dashed #111; border-radius: 12px; color: #fff;
+    padding: 20px; text-align: center; cursor: pointer; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+}
+.vtxt-upload-box:hover { filter: brightness(0.95); }
+.vtxt-icon { font-size: 2.2rem; }
+.vtxt-filename { font-weight: 800; font-size: 0.95rem; word-break: break-all; color: #fff; }
+
+/* WORKSPACE CONTAINER */
+.vtxt-video-container {
+    position: relative; width: 100%; border-radius: 12px; border: 2px solid #111; 
+    overflow: hidden; background: #000; line-height: 0; user-select: none;
+}
+#vtxt-player { width: 100%; height: auto; display: block; pointer-events: auto; }
+
+/* KHUNG CHỌN (DRAG ẢNH CHỮ) */
+#vtxt-selectors-wrapper {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
+}
+.vtxt-text-element {
+    position: absolute; cursor: move; display: none; pointer-events: auto;
+    border: 2px dashed transparent; box-sizing: content-box; padding: 2px;
+}
+.vtxt-text-element:hover { border-color: rgba(255,255,255,0.5); }
+.vtxt-text-element.active-sel { border-color: var(--clr-tangerine); z-index: 10; box-shadow: 0px 0px 10px rgba(0,0,0,0.5); }
+
+/* TASKS LIST & CARDS */
+.vtxt-btn-add {
+    background: var(--clr-tangerine); border: 2px solid #111; border-radius: 8px; font-weight: 800;
+    padding: 8px 15px; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.vtxt-btn-add:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+.vtxt-tasks-list { display: flex; flex-direction: column; gap: 15px; max-height: 500px; overflow-y: auto; padding-right: 5px; }
+.vtxt-task-card {
+    background: #f8f9fa; border: 2px solid #111; border-radius: 10px; padding: 15px;
+    box-shadow: 3px 3px 0px #111; transition: 0.2s; cursor: pointer; display: flex; flex-direction: column; gap: 10px;
+}
+.vtxt-task-card.active-card { background: #fdf2f8; border-color: var(--clr-pink); box-shadow: 3px 3px 0px var(--clr-pink); }
+
+.vtxt-task-header { display: flex; justify-content: space-between; font-weight: 900; color: #333;}
+.vtxt-task-del { color: #fff; background: var(--clr-danger); border: 1px solid #111; padding: 2px 8px; border-radius: 6px; cursor: pointer; font-size:0.8rem; color: #111; font-weight: bold;}
+
+.vtxt-time-row { display: flex; gap: 10px; }
+.vtxt-time-input { flex: 1; display: flex; align-items: center; gap: 5px; font-size: 0.85rem; font-weight: 700; }
+.vtxt-time-input input { width: 60px; padding: 5px; border: 2px solid #111; border-radius: 6px; font-weight: bold; text-align: center; }
+
+.vtxt-input-text { width: 100%; padding: 10px; border: 2px solid #111; border-radius: 6px; font-weight: 700; font-size: 1rem; }
+.vtxt-color-picker { width: 40px; height: 35px; border: 2px solid #111; border-radius: 6px; cursor: pointer; padding: 0; }
+
+.vtxt-hint-text { font-size: 0.85rem; font-weight: 600; color: #111; margin-top: 15px; padding: 12px; background: #fff3cd; border-radius: 8px; border: 1px dashed #111;}
+
+/* Nút Submit */
+.vtxt-btn-primary {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-purple); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: 0.15s; color: #fff; margin-top: 5px;
+}
+.vtxt-btn-primary:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.vtxt-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none; background: #ccc; color: #111;}
+
+/* Progress */
+.vtxt-status-box { margin-top: 20px; padding: 20px; background: #fff; border: var(--neo-border); border-radius: 12px; text-align: center; box-shadow: 3px 3px 0px #111; }
+.vtxt-status-box h4 { margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 900; color: #111; }
+.vtxt-progress-bar { width: 100%; height: 24px; background: #eee; border: 2px solid #111; border-radius: 50px; overflow: hidden; }
+.vtxt-progress-fill { width: 0%; height: 100%; background: var(--clr-pink); transition: width 0.2s ease; border-right: 2px solid #111;}
