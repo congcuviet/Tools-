@@ -1,0 +1,87 @@
+.vcrop-soft-wrapper {
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #fcfcfc;
+    --bg-card: #ffffff;
+    --clr-mint: #a0e8af;
+    --clr-peach: #ffdaaa;
+    --clr-sky: #a9def9;
+    --clr-danger: #ffadad;
+
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.vcrop-soft-wrapper * { box-sizing: border-box; }
+
+.vcrop-soft-header {
+    background: var(--clr-peach); padding: 20px;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.vcrop-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.vcrop-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; }
+
+.vcrop-body {
+    background: var(--bg-card); padding: 25px;
+    border: var(--neo-border); border-radius: 12px;
+    box-shadow: var(--neo-shadow);
+}
+
+.vcrop-group { margin-bottom: 20px; }
+
+/* Khung Upload Mềm Mại */
+.vcrop-upload-box {
+    background: var(--clr-sky); border: 2px dashed #111; border-radius: 12px;
+    padding: 20px; text-align: center; cursor: pointer; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.vcrop-upload-box:hover { filter: brightness(0.95); }
+.vcrop-icon { font-size: 2.2rem; }
+.vcrop-filename { font-weight: 800; font-size: 1rem; word-break: break-all; color: #111; }
+
+/* Trình Phát Video */
+#vcrop-player {
+    width: 100%; max-height: 400px; border: var(--neo-border);
+    border-radius: 12px; background: #000;
+}
+
+/* Select Box */
+.vcrop-label { font-weight: 800; font-size: 1rem; margin-bottom: 10px; display: block; }
+.neo-select-wrapper { position: relative; }
+.neo-select {
+    width: 100%; appearance: none; background: #fff;
+    border: var(--neo-border); border-radius: 8px;
+    padding: 14px 15px; font-family: inherit; font-size: 0.95rem; font-weight: 700;
+    cursor: pointer; outline: none; box-shadow: 3px 3px 0px #111; transition: 0.2s; color: #111;
+}
+.neo-select:focus { transform: translate(-2px, -2px); box-shadow: 5px 5px 0px #111; background: #f0f8ff;}
+.neo-select-wrapper::after { content: "▼"; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 1rem; color: #111; font-weight: bold; }
+
+.vcrop-hint-text { font-size: 0.85rem; font-weight: 600; color: #555; margin-top: 15px; background: #f1f3f5; padding: 12px; border-radius: 8px; border: 1px dashed #111;}
+
+/* Nút Submit */
+.vcrop-btn-primary {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-mint); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: 0.15s; color: #111;
+}
+.vcrop-btn-primary:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.vcrop-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none; background: #ccc;}
+
+/* Khung Progress */
+.vcrop-status-box {
+    margin-top: 25px; padding: 20px; background: #fff;
+    border: var(--neo-border); border-radius: 12px; text-align: center; box-shadow: 3px 3px 0px #111;
+}
+.vcrop-status-box h4 { margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 900; color: #111; }
+.vcrop-progress-bar { width: 100%; height: 24px; background: #eee; border: 2px solid #111; border-radius: 50px; overflow: hidden; }
+.vcrop-progress-fill { width: 0%; height: 100%; background: var(--clr-sky); transition: width 0.2s ease; border-right: 2px solid #111;}
