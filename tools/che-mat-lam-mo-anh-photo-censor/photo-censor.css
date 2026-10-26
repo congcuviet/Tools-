@@ -1,0 +1,148 @@
+/* =========================================
+   GIAO DIỆN SOFT NEO-BRUTALISM (PASTEL)
+========================================= */
+
+:root {
+    --border-soft: 2px solid #2d3142;
+    --shadow-soft: 4px 4px 0px rgba(45, 49, 66, 0.8);
+    --shadow-soft-hover: 2px 2px 0px rgba(45, 49, 66, 0.8);
+    
+    --clr-bg: #faf9f6;        
+    --clr-surface: #ffffff;   
+    --clr-primary: #8fb8ed;   /* Xanh dương nhạt */
+    --clr-secondary: #f2cc8f; /* Vàng nhạt */
+    --clr-success: #81b29a;   /* Xanh lá nhạt */
+    --clr-purple: #c8b6ff;    /* Tím nhạt */
+    --clr-text: #2d3142;      
+}
+
+.censor-soft-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--clr-bg);
+    padding: 25px;
+    border: var(--border-soft);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.censor-soft-wrapper * { box-sizing: border-box; }
+
+/* Header */
+.censor-soft-header {
+    background: var(--clr-surface);
+    padding: 20px;
+    border: var(--border-soft);
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-soft);
+}
+.censor-soft-header h2 { margin: 0 0 8px 0; font-size: 1.8rem; font-weight: 800; }
+.censor-soft-header p { margin: 0; font-weight: 500; font-size: 1rem; color: #555;}
+
+/* Upload Area */
+.upload-label {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 15px; background: var(--clr-purple); padding: 50px 20px;
+    border: 2px dashed var(--clr-text); border-radius: 12px; cursor: pointer; transition: all 0.2s ease;
+}
+.upload-label:hover { background: #b8a2f8; transform: translateY(-2px); box-shadow: var(--shadow-soft); border-style: solid; }
+.upload-icon { font-size: 3.5rem; }
+.upload-text { font-size: 1.15rem; font-weight: 700; color: #111; }
+
+/* Editor & Canvas Area */
+.editor-section { display: flex; flex-direction: column; gap: 20px; }
+
+.canvas-container {
+    width: 100%;
+    /* Đổi nền thành màu tối (viền đen/xám đậm) theo đúng ý bạn */
+    background: #2d3142; 
+    border: var(--border-soft);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: inset 2px 2px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    cursor: crosshair; 
+}
+
+#censor-canvas {
+    max-width: 100%;
+    /* Có thể tăng max-height lên 600px hoặc 70vh để hiển thị ảnh dọc to hơn */
+    max-height: 60vh; 
+    
+    /* 2 DÒNG QUAN TRỌNG NHẤT: Bỏ ép width 100% để giữ đúng tỷ lệ ảnh */
+    width: auto; 
+    height: auto;
+    
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background: #fff;
+    object-fit: contain;
+    touch-action: none; /* Giữ nguyên dòng này để không bị cuộn trang trên mobile */
+}
+
+/* Controls */
+.censor-controls-box {
+    background: var(--clr-surface);
+    border: var(--border-soft);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.control-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.box-title { margin: 0 0 15px 0; font-size: 1rem; font-weight: 800; text-transform: uppercase; border-bottom: 2px dashed #eee; padding-bottom: 8px;}
+.separator { height: 20px; }
+
+/* Nút Style */
+.style-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.style-btn {
+    padding: 10px; font-weight: 700; font-size: 0.9rem;
+    background: var(--clr-bg); color: var(--clr-text);
+    border: var(--border-soft); border-radius: 8px; cursor: pointer; transition: all 0.15s ease;
+}
+.style-btn:hover { background: #eee; transform: translateY(-2px); box-shadow: 2px 2px 0px rgba(45, 49, 66, 0.5); }
+.style-btn.active { background: var(--clr-text); color: var(--clr-surface); }
+
+/* Slider Brush */
+.slider-group { display: flex; align-items: center; gap: 15px; }
+#val-brush { font-weight: 800; background: #eee; padding: 4px 10px; border-radius: 8px; min-width: 60px; text-align: center;}
+.soft-slider { -webkit-appearance: none; width: 100%; background: transparent; }
+.soft-slider:focus { outline: none; }
+.soft-slider::-webkit-slider-runnable-track { width: 100%; height: 10px; cursor: pointer; background: var(--clr-bg); border-radius: 5px; border: 1.5px solid var(--clr-text); }
+.soft-slider::-webkit-slider-thumb { height: 24px; width: 24px; border-radius: 50%; background: var(--clr-primary); border: 1.5px solid var(--clr-text); cursor: pointer; -webkit-appearance: none; margin-top: -8px; box-shadow: 2px 2px 0px rgba(0,0,0,0.2); transition: transform 0.1s;}
+.soft-slider::-webkit-slider-thumb:active { transform: scale(1.1); }
+
+/* Action Bar */
+.action-bar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.action-btn {
+    padding: 14px 18px; font-size: 0.95rem; font-weight: 700;
+    background: var(--clr-surface); color: var(--clr-text);
+    border: var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-soft);
+    cursor: pointer; transition: all 0.15s ease;
+}
+.action-btn:hover { transform: translateY(-2px); }
+.action-btn:active { transform: translate(2px, 2px); box-shadow: var(--shadow-soft-hover); }
+
+.btn-change { background: var(--clr-secondary); }
+
+.btn-primary-soft {
+    flex: 1; min-width: 200px; padding: 14px 20px; font-size: 1.05rem; font-weight: 800;
+    background: var(--clr-success); color: var(--clr-text);
+    border: var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-soft);
+    cursor: pointer; text-transform: uppercase; text-align: center; text-decoration: none; transition: all 0.15s ease;
+}
+.btn-primary-soft:active { transform: translate(2px, 2px); box-shadow: var(--shadow-soft-hover); }
+
+@media (max-width: 700px) {
+    .control-grid { grid-template-columns: 1fr; }
+    .action-bar { flex-direction: column; align-items: stretch; }
+    .btn-primary-soft { text-align: center; }
+}
