@@ -29,6 +29,17 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Bảng Tuần Hoàn Hoá Học | [Mở công cụ](https://congcuviet.com/cong-cu/bang-tuan-hoan-hoa-hoc/) |
 | Bộ chuyển đổi đơn vị đo lường đa năng (Metric, Imperial) | [Mở công cụ](https://congcuviet.com/cong-cu/bo-chuyen-doi-don-vi-do-luong-da-nang-metric-imperial/) |
 
+| Bộ Chuyển Đổi Múi Giờ | [Mở công cụ](https://congcuviet.com/cong-cu/bo-chuyen-doi-mui-gio/) |
+| Bộ lọc màu Video – Video Color Filters | [Mở công cụ](https://congcuviet.com/cong-cu/bo-loc-mau-video-video-color-filters/) |
+| Cắt ảnh online – Image Cropper | [Mở công cụ](https://congcuviet.com/cong-cu/cat-anh-online-image-cropper/) |
+| Cắt khung hình Video – Video Cropper | [Mở công cụ](https://congcuviet.com/cong-cu/cat-khung-hinh-video-video-cropper/) |
+| Cắt nhạc – Audio Trimmer / Cutter | [Mở công cụ](https://congcuviet.com/cong-cu/cat-nhac-audio-trimmer-cutter/) |
+| Cắt Video – Video Cutter | [Mở công cụ](https://congcuviet.com/cong-cu/cat-video-video-cutter/) |
+| Cấu Hình Electron Nguyên Tử | [Mở công cụ](https://congcuviet.com/cong-cu/cau-hinh-electron-nguyen-tu/) |
+| Che mặt & Làm mờ ảnh – Photo Censor | [Mở công cụ](https://congcuviet.com/cong-cu/che-mat-lam-mo-anh-photo-censor/) |
+| Che mờ/Xóa logo Video – Blur Video Watermark | [Mở công cụ](https://congcuviet.com/cong-cu/che-mo-xoa-logo-video-blur-video-watermark/) |
+| Chèn chữ vào Video – Add Text to Video | [Mở công cụ](https://congcuviet.com/cong-cu/chen-chu-vao-video-add-text-to-video/) |
+
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
 ## Theo dõi Công Cụ Việt
