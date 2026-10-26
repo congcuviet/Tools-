@@ -1,0 +1,179 @@
+/* =========================================
+   GIAO DIỆN "SOFT NEO-BRUTALISM"
+========================================= */
+
+:root {
+    /* Viền mỏng hơn (2px thay vì 3-4px) */
+    --border-soft: 2px solid #2d3142;
+    /* Bóng đổ nhẹ hơn, màu xám đậm thay vì đen tuyền */
+    --shadow-soft: 4px 4px 0px rgba(45, 49, 66, 0.8);
+    --shadow-soft-hover: 2px 2px 0px rgba(45, 49, 66, 0.8);
+    
+    /* Bảng màu Pastel thư giãn */
+    --clr-bg: #faf9f6;        /* Màu Be nhạt (Off-white) */
+    --clr-surface: #ffffff;   /* Trắng */
+    --clr-primary: #8fb8ed;   /* Xanh dương nhạt Pastel */
+    --clr-secondary: #f2cc8f; /* Vàng nhạt Pastel */
+    --clr-success: #81b29a;   /* Xanh rêu/ngọc nhạt */
+    --clr-text: #2d3142;      /* Xanh Navy xám (Tránh đen tuyền để đỡ gắt) */
+}
+
+.crop-soft-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--clr-bg);
+    padding: 25px;
+    border: var(--border-soft);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.crop-soft-wrapper * { box-sizing: border-box; }
+
+/* Header */
+.crop-soft-header {
+    background: var(--clr-surface);
+    padding: 20px;
+    border: var(--border-soft);
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-soft);
+}
+.crop-soft-header h2 { margin: 0 0 8px 0; font-size: 1.8rem; font-weight: 800; }
+.crop-soft-header p { margin: 0; font-weight: 500; font-size: 1rem; color: #555;}
+
+/* Upload Section */
+.upload-section { margin-bottom: 20px; }
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: var(--clr-secondary);
+    padding: 40px 20px;
+    border: 2px dashed var(--clr-text);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.upload-label:hover {
+    background: #e8c387;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+    border-style: solid;
+}
+.upload-icon { font-size: 3rem; }
+.upload-text { font-size: 1.1rem; font-weight: 700; }
+
+/* Editor Section */
+.editor-section { display: flex; flex-direction: column; gap: 20px; }
+
+/* Cropper Container */
+.cropper-box {
+    width: 100%;
+    max-height: 500px;
+    background: #e0e0e0;
+    border: var(--border-soft);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+}
+/* Tuỳ chỉnh lại màu overlay của thư viện cropper.js cho mướt mắt */
+.cropper-view-box, .cropper-face { border-radius: 4px; }
+.cropper-line, .cropper-point { background-color: var(--clr-primary); }
+.cropper-point { width: 8px; height: 8px; border-radius: 50%; }
+
+/* Bảng điều khiển */
+.crop-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: var(--clr-surface);
+    padding: 20px;
+    border: var(--border-soft);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+.control-group p { margin: 0 0 10px 0; font-weight: 700; font-size: 0.95rem; text-transform: uppercase; color: #555;}
+
+.ratio-buttons, .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Các nút bấm nhỏ */
+.ratio-btn, .action-btn {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    border: var(--border-soft);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+.ratio-btn:hover, .action-btn:hover { background: #eee; transform: translateY(-2px); box-shadow: 2px 2px 0px rgba(45, 49, 66, 0.5); }
+.ratio-btn.active { background: var(--clr-text); color: var(--clr-surface); }
+.btn-change-img { background: var(--clr-secondary); }
+
+/* Nút Primary (Cắt / Tải) */
+.btn-primary-soft {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    background: var(--clr-primary);
+    color: var(--clr-text);
+    border: var(--border-soft);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.15s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-primary-soft:active {
+    box-shadow: var(--shadow-soft-hover);
+    transform: translate(2px, 2px);
+}
+.btn-download { background: var(--clr-success); }
+
+/* Result Section */
+.result-section {
+    background: var(--clr-surface);
+    padding: 25px;
+    border: var(--border-soft);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+}
+.result-title { margin: 0 0 20px 0; font-size: 1.4rem; font-weight: 800; color: var(--clr-success);}
+
+.preview-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+    border: var(--border-soft);
+    border-radius: 8px;
+    padding: 10px;
+    background: var(--clr-bg);
+}
+.preview-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 650px) {
+    .crop-controls { grid-template-columns: 1fr; }
+    .cropper-box { max-height: 350px; }
+}
