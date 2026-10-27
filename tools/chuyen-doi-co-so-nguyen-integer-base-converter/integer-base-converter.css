@@ -1,0 +1,106 @@
+.ibasec-soft-wrapper {
+    /* Khai báo biến cục bộ, cách ly hoàn toàn */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f0f4f8;
+    --clr-yellow: #fde74c;
+    --clr-white: #ffffff;
+    --clr-red: #ff595e;
+    --clr-blue: #1982c4;
+    --clr-green: #8ac926;
+    --clr-purple: #6a4c93;
+    --clr-text: #111111;
+
+    max-width: 950px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.ibasec-soft-wrapper * { box-sizing: border-box; }
+
+.ibasec-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.ibasec-soft-header h2 { margin: 0 0 10px 0; font-size: 1.6rem; font-weight: 900; color: var(--clr-yellow); text-transform: uppercase;}
+.ibasec-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; }
+
+.ibasec-body { padding: 0; }
+
+/* BỐ CỤC 2 CỘT */
+.ibasec-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.ibasec-col { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+@media (min-width: 768px) { .ibasec-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* CARDS */
+.ibasec-card {
+    padding: 20px; border: var(--neo-border); 
+    border-radius: 12px; box-shadow: var(--neo-shadow); height: 100%; display: flex; flex-direction: column;
+}
+.ibasec-bg-yellow { background: var(--clr-yellow); }
+.ibasec-bg-white { background: var(--clr-white); }
+.ibasec-card-title { margin: 0 0 20px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed #111; padding-bottom: 10px; }
+
+/* CÁC PHẦN TỬ FORM */
+.ibasec-group { margin-bottom: 20px; }
+.ibasec-label { font-weight: 900; font-size: 1rem; display: block; margin-bottom: 8px; }
+
+.ibasec-select, .ibasec-num-input {
+    width: 100%; padding: 12px; border: 2px solid #111; border-radius: 8px; 
+    font-weight: 800; font-size: 1rem; color: #111; outline: none; box-shadow: 3px 3px 0px #111;
+    font-family: inherit; cursor: pointer; background: #fff;
+}
+.ibasec-select:focus, .ibasec-num-input:focus { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #111; }
+
+.ibasec-textarea {
+    width: 100%; min-height: 120px; padding: 15px; font-family: monospace; font-size: 1.2rem;
+    font-weight: bold; color: #111; background: #fff; border: 3px solid #111; 
+    border-radius: 8px; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.1); 
+    resize: vertical; word-break: break-all; outline: none;
+}
+.ibasec-textarea:focus { border-color: var(--clr-blue); }
+
+.ibasec-error-msg {
+    margin-top: 10px; padding: 10px; background: var(--clr-red); color: #fff; 
+    font-weight: bold; border: 2px solid #111; border-radius: 8px; text-align: center;
+}
+
+/* KẾT QUẢ ĐẦU RA */
+.ibasec-results-list { display: flex; flex-direction: column; gap: 18px; }
+.ibasec-result-item { display: flex; flex-direction: column; gap: 5px; }
+.ibasec-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* BADGES */
+.ibasec-badge { display: inline-block; padding: 4px 10px; font-weight: 900; font-size: 0.85rem; border: 2px solid #111; border-radius: 6px; box-shadow: 2px 2px 0px #111; width: fit-content; text-transform: uppercase;}
+.ibasec-badge-dec { background: var(--clr-green); color: #111; }
+.ibasec-badge-hex { background: var(--clr-purple); color: #fff; }
+.ibasec-badge-oct { background: var(--clr-blue); color: #fff; }
+.ibasec-badge-bin { background: #333; color: #fff; }
+.ibasec-badge-custom { background: #eee; color: #111; }
+
+.ibasec-input-row { display: flex; gap: 10px; }
+.ibasec-text-input {
+    flex: 1; padding: 10px; border: 2px solid #111; border-radius: 8px;
+    font-family: monospace; font-weight: bold; font-size: 1.1rem;
+    background: #f8f9fa; outline: none; box-shadow: inset 2px 2px 0px rgba(0,0,0,0.05);
+}
+.ibasec-num-input-small {
+    width: 70px; padding: 4px; border: 2px solid #111; border-radius: 6px;
+    font-weight: bold; text-align: center; outline: none;
+}
+
+.ibasec-btn-copy {
+    padding: 0 15px; background: #fff; border: 2px solid #111; border-radius: 8px;
+    font-size: 1.2rem; cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s; display: flex; align-items: center; justify-content: center;
+}
+.ibasec-btn-copy:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+.ibasec-custom-output { padding-top: 15px; border-top: 2px dashed #ccc; }
