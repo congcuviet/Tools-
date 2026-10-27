@@ -1,0 +1,98 @@
+.listc-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f4f4f5;
+    --clr-cyan: #4cc9f0;
+    --clr-yellow: #fee440;
+    --clr-white: #ffffff;
+    --clr-green: #06d6a0;
+    --clr-text: #111111;
+
+    max-width: 950px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.listc-soft-wrapper * { box-sizing: border-box; }
+
+.listc-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.listc-soft-header h2 { margin: 0 0 10px 0; font-size: 1.7rem; font-weight: 900; color: var(--clr-green); text-transform: uppercase;}
+.listc-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #eee; }
+
+.listc-body { padding: 0; }
+
+/* LAYOUT 2 CỘT */
+.listc-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.listc-col { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+@media (min-width: 768px) { .listc-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* CARDS */
+.listc-card {
+    padding: 20px; border: var(--neo-border); 
+    border-radius: 12px; box-shadow: var(--neo-shadow); height: 100%; display: flex; flex-direction: column;
+}
+.listc-bg-cyan { background: var(--clr-cyan); }
+.listc-bg-white { background: var(--clr-white); }
+.listc-card-title { margin: 0 0 15px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed #111; padding-bottom: 10px; }
+.listc-sub-title { margin: 15px 0 10px 0; font-size: 1rem; font-weight: 900; }
+
+/* FORM ELEMENTS */
+.listc-group { margin-bottom: 15px; }
+.listc-label { font-weight: 900; font-size: 0.95rem; display: block; margin-bottom: 8px; }
+
+.listc-textarea {
+    width: 100%; min-height: 180px; padding: 15px; font-family: monospace; font-size: 1rem;
+    font-weight: bold; color: #111; background: #fff; border: 3px solid #111; 
+    border-radius: 8px; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.1); 
+    resize: vertical; outline: none; margin-bottom: 15px;
+}
+.listc-textarea:focus { border-color: #111; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.1), 0 0 0 3px var(--clr-yellow); }
+.listc-textarea-output { background: #fdfdfd; flex: 1; min-height: 200px; }
+
+.listc-select {
+    width: 100%; padding: 10px 12px; border: 2px solid #111; border-radius: 8px; 
+    font-weight: 800; font-size: 0.95rem; color: #111; outline: none; box-shadow: 3px 3px 0px #111;
+    font-family: inherit; cursor: pointer; background: #fff;
+}
+.listc-select:focus { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #111; }
+.listc-select-highlight { background: var(--clr-yellow); }
+
+/* CUSTOM PANEL */
+.listc-custom-panel { background: #eee; padding: 12px; border: 2px dashed #111; border-radius: 8px; margin-bottom: 15px; }
+.listc-custom-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.listc-custom-item { flex: 1; min-width: 80px; display: flex; flex-direction: column; gap: 5px; }
+.listc-custom-item label { font-size: 0.8rem; font-weight: 800; }
+.listc-text-input { padding: 6px; border: 2px solid #111; border-radius: 4px; font-weight: bold; font-family: monospace; outline: none; }
+
+/* CUSTOM CHECKBOXES NEO */
+.listc-checkbox-group { display: flex; flex-direction: column; gap: 10px; background: rgba(255,255,255,0.4); padding: 12px; border: 2px solid #111; border-radius: 8px; box-shadow: 2px 2px 0px #111; }
+.listc-check-row { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; user-select: none; }
+.listc-check-row input { display: none; }
+.listc-check-box {
+    width: 22px; height: 22px; border: 2px solid #111; border-radius: 4px; 
+    background: #fff; display: flex; align-items: center; justify-content: center; transition: 0.1s;
+}
+.listc-check-row input:checked + .listc-check-box { background: var(--clr-yellow); }
+.listc-check-row input:checked + .listc-check-box::after { content: "✔"; font-weight: 900; font-size: 0.9rem; color: #111; }
+
+/* BOTTOM ROW (Badge & Button) */
+.listc-info-row { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
+.listc-badge { background: #111; color: var(--clr-yellow); padding: 6px 12px; font-weight: 900; font-size: 0.85rem; border-radius: 6px; border: 2px solid #111; }
+
+.listc-btn-copy {
+    padding: 10px 20px; background: #111; color: var(--clr-green); border: 2px solid #111; border-radius: 8px;
+    font-size: 1rem; font-weight: 900; cursor: pointer; box-shadow: 4px 4px 0px var(--clr-yellow); transition: 0.1s; text-transform: uppercase;
+}
+.listc-btn-copy:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px var(--clr-yellow); }
