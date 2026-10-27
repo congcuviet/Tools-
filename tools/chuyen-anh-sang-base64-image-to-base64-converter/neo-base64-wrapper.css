@@ -1,0 +1,80 @@
+.neo-base64-wrapper {
+    --bg-white: #ffffff;
+    --border-ink: 3px solid #111111;
+    --shadow-solid: 5px 5px 0px #111111;
+    --clr-primary: #3a86ff;  
+    --clr-accent: #ff006e;   
+    --clr-bg: #f8f9fa;
+
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111111;
+    background: var(--clr-bg);
+    padding: 25px;
+    border: var(--border-ink);
+    border-radius: 12px;
+    box-shadow: 8px 8px 0px #111;
+}
+
+.neo-base64-wrapper * { box-sizing: border-box; }
+
+.neo-base64-header { 
+    background: var(--clr-primary); color: #fff; 
+    border: var(--border-ink); box-shadow: var(--shadow-solid); 
+    padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 25px; 
+}
+.neo-base64-header h2 { margin: 0 0 10px 0; font-size: 1.6rem; font-weight: 900; text-transform: uppercase; }
+.neo-base64-header p { margin: 0; font-weight: 700; }
+
+.neo-dropzone {
+    border: 3px dashed #111; border-radius: 8px; background: #fff;
+    padding: 40px 20px; text-align: center; cursor: pointer;
+    transition: all 0.2s; position: relative; overflow: hidden;
+    min-height: 200px; display: flex; align-items: center; justify-content: center;
+}
+.neo-dropzone.dragover { background: #e9ecef; border-color: var(--clr-primary); }
+
+.neo-drop-content { z-index: 2; }
+.neo-drop-icon { font-size: 3rem; display: block; margin-bottom: 10px; }
+.neo-drop-content h3 { margin: 0; font-weight: 900; }
+
+.neo-preview-img {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: contain; z-index: 1; background: #e9ecef; padding: 10px;
+}
+
+.neo-btn-sm {
+    background: var(--clr-accent); color: #fff; border: var(--border-ink); font-weight: 800;
+    padding: 10px 20px; border-radius: 6px; box-shadow: 3px 3px 0px #111; cursor: pointer;
+}
+.neo-btn-sm:active { box-shadow: 1px 1px 0px #111; transform: translate(2px, 2px); }
+
+.neo-result-area { margin-top: 25px; border-top: 4px solid #111; padding-top: 25px; }
+
+.neo-info-bar { display: flex; justify-content: space-between; font-weight: 800; background: #fff; padding: 10px 15px; border: var(--border-ink); border-radius: 6px; margin-bottom: 20px; box-shadow: 3px 3px 0px #111; flex-wrap: wrap; gap: 10px;}
+
+.neo-code-group { margin-bottom: 20px; }
+.neo-code-group label { font-weight: 900; display: block; margin-bottom: 8px; }
+
+.neo-textarea-wrap { position: relative; }
+.neo-textarea-wrap textarea {
+    width: 100%; height: 120px; padding: 15px; border: var(--border-ink);
+    border-radius: 8px; background: #fff; font-family: monospace; font-size: 0.9rem;
+    resize: vertical; box-shadow: 4px 4px 0px #111; outline: none;
+}
+
+.neo-btn-copy {
+    position: absolute; top: 10px; right: 25px; background: #111; color: #fff;
+    border: none; padding: 8px 15px; border-radius: 4px; font-weight: 800;
+    cursor: pointer; transition: 0.1s;
+}
+.neo-btn-copy:active { transform: scale(0.95); }
+.neo-btn-copy.copied { background: #38b000; }
+
+.neo-btn-reset {
+    width: 100%; background: #ffbe0b; color: #111; border: var(--border-ink);
+    padding: 15px; font-size: 1.1rem; font-weight: 900; border-radius: 8px;
+    box-shadow: 4px 4px 0px #111; cursor: pointer; text-transform: uppercase;
+}
+.neo-btn-reset:active { box-shadow: 2px 2px 0px #111; transform: translate(2px, 2px); }
