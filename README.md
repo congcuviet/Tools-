@@ -39,6 +39,16 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Che mặt & Làm mờ ảnh – Photo Censor | [Mở công cụ](https://congcuviet.com/cong-cu/che-mat-lam-mo-anh-photo-censor/) |
 | Che mờ/Xóa logo Video – Blur Video Watermark | [Mở công cụ](https://congcuviet.com/cong-cu/che-mo-xoa-logo-video-blur-video-watermark/) |
 | Chèn chữ vào Video – Add Text to Video | [Mở công cụ](https://congcuviet.com/cong-cu/chen-chu-vao-video-add-text-to-video/) |
+| Chia tiền hóa đơn & tính tiền tip (chia đều / theo món) | [Mở công cụ](https://congcuviet.com/cong-cu/chia-tien-hoa-don-tinh-tien-tip/) |
+| Chỉnh màu & Bộ lọc ảnh – Image Filters | [Mở công cụ](https://congcuviet.com/cong-cu/chinh-mau-bo-loc-anh-image-filters/) |
+| Chỉnh tốc độ âm thanh Video – Audio Pitch Changer | [Mở công cụ](https://congcuviet.com/cong-cu/chinh-toc-do-am-thanh-video-audio-pitch-changer/) |
+| Chỉnh tốc độ & Pitch – Speed & Pitch Changer | [Mở công cụ](https://congcuviet.com/cong-cu/chinh-toc-do-pitch-speed-pitch-changer/) |
+| Chuẩn hóa định dạng Email – Email normalizer | [Mở công cụ](https://congcuviet.com/cong-cu/chuan-hoa-dinh-dang-email-email-normalizer/) |
+| Chuyển ảnh sang Base64 – Image to Base64 Converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-anh-sang-base64-image-to-base64-converter/) |
+| Chuyển định dạng ảnh | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-dinh-dang-anh/) |
+| Chuyển đổi cơ số nguyên – Integer base converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-co-so-nguyen-integer-base-converter/) |
+| Chuyển đổi CSV sang JSON (CSV to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-csv-sang-json-csv-to-json-converter/) |
+| Chuyển đổi danh sách – List converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-danh-sach-list-converter/) |
 
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
