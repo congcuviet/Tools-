@@ -1,0 +1,96 @@
+/* =========================================
+   SPEED & PITCH CHANGER (SOFT NEO-BRUTALISM)
+========================================= */
+.sp-soft-wrapper {
+    /* Biến nội bộ - Không dùng :root */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #fcfcfc;
+    --bg-card: #ffffff;
+    --clr-cyan: #9bf6ff;  /* Xanh Cyan Pastel */
+    --clr-pink: #ffc6ff;  /* Hồng Pastel */
+    --clr-purple: #bdb2ff; /* Tím Pastel */
+    --clr-yellow: #fdffb6; /* Vàng Pastel */
+
+    max-width: 700px; margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111; background: var(--bg-main);
+    padding: 25px; border: var(--neo-border); border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.sp-soft-wrapper * { box-sizing: border-box; }
+
+.sp-soft-header {
+    background: var(--clr-purple); padding: 20px;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.sp-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase; color: #111;}
+.sp-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; color: #111;}
+
+/* Khu vực Upload */
+.sp-input-section { margin-bottom: 25px; text-align: center; }
+.sp-btn-upload {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-cyan); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: all 0.15s; color: #111;
+}
+.sp-btn-upload:active { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.sp-filename-display { margin-top: 15px; font-weight: 700; background: #f0f0f0; padding: 10px; border-radius: 8px; border: 2px dashed #111; word-break: break-all; font-size: 0.9rem;}
+
+/* Controls Box */
+.sp-controls-box {
+    background: var(--bg-card); border: var(--neo-border); border-radius: 12px;
+    padding: 25px; box-shadow: var(--neo-shadow); margin-bottom: 10px;
+}
+.control-group { margin-bottom: 25px; }
+
+.label-row { display: flex; justify-content: space-between; font-weight: 800; font-size: 0.95rem; margin-bottom: 15px;}
+.label-row span { background: var(--clr-yellow); border: 2px solid #111; padding: 4px 12px; border-radius: 6px; box-shadow: 2px 2px 0px #111;}
+
+/* Custom Slider Neo-Brutalism */
+.neo-slider { -webkit-appearance: none; width: 100%; background: transparent; }
+.neo-slider:focus { outline: none; }
+.neo-slider::-webkit-slider-runnable-track { width: 100%; height: 12px; background: #eee; border-radius: 6px; border: 2px solid #111; }
+.neo-slider::-webkit-slider-thumb { height: 26px; width: 26px; border-radius: 50%; background: var(--clr-pink); border: 3px solid #111; cursor: pointer; -webkit-appearance: none; margin-top: -9px; box-shadow: 2px 2px 0px #111; transition: transform 0.1s;}
+.neo-slider::-webkit-slider-thumb:active { transform: scale(1.15); }
+
+/* Hint Box */
+.sp-hint-box { margin-top: 15px; font-weight: 700; font-size: 0.9rem; background: #f8f9fa; padding: 10px; border-radius: 8px; border: 2px dashed #111; text-align: center; }
+
+/* Buttons */
+.sp-action-bar { display: flex; gap: 15px; margin-bottom: 20px;}
+.sp-action-bar button {
+    padding: 16px; font-family: inherit; font-size: 1.05rem; font-weight: 900; text-transform: uppercase;
+    border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.sp-action-bar button:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.sp-action-bar button:disabled { opacity: 0.5; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none;}
+
+.neo-btn-primary { flex: 2; background: var(--clr-pink); color: #111;}
+.neo-btn-action { flex: 1; background: var(--clr-yellow); color: #111;}
+
+/* Animation Sóng âm thanh */
+.sp-status-bar {
+    background: #111; color: #fff; padding: 15px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; gap: 15px;
+    font-weight: 700; font-size: 1rem; border: var(--neo-border);
+}
+.sound-wave { display: flex; gap: 4px; align-items: center; height: 20px; opacity: 0.3; transition: 0.3s;}
+.sound-wave.playing { opacity: 1; }
+.sound-wave span { display: block; width: 6px; height: 100%; background: var(--clr-cyan); border-radius: 3px; animation: spBounce 1s infinite ease-in-out; transform-origin: bottom;}
+.sound-wave span:nth-child(1) { animation-delay: 0.0s; }
+.sound-wave span:nth-child(2) { animation-delay: 0.2s; }
+.sound-wave span:nth-child(3) { animation-delay: 0.4s; }
+.sound-wave span:nth-child(4) { animation-delay: 0.2s; }
+.sound-wave span:nth-child(5) { animation-delay: 0.0s; }
+
+@keyframes spBounce { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+.sound-wave:not(.playing) span { animation: none; transform: scaleY(0.2); }
+
+@media (max-width: 700px) {
+    .sp-action-bar { flex-direction: column; }
+}
