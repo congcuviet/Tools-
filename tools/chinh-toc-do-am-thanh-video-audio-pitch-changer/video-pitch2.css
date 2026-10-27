@@ -1,0 +1,126 @@
+.vapc-soft-wrapper {
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --clr-hotpink: #ff99c8;
+    --clr-cyan: #9bf6ff;
+    --clr-yellow: #fdffb6;
+    --clr-mint: #b9fbc0;
+    --clr-danger: #ffadad;
+
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.vapc-soft-wrapper * { box-sizing: border-box; }
+
+.vapc-soft-header {
+    background: var(--clr-hotpink); padding: 20px;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.vapc-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.vapc-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; }
+
+.vapc-body {
+    background: var(--bg-card); padding: 25px;
+    border: var(--neo-border); border-radius: 12px;
+    box-shadow: var(--neo-shadow);
+}
+
+.vapc-group { margin-bottom: 20px; }
+.vapc-label { font-weight: 900; font-size: 1rem; margin-bottom: 10px; display: block; }
+
+/* Khung Upload */
+.vapc-upload-box {
+    background: var(--clr-cyan); border: 2px dashed #111; border-radius: 12px;
+    padding: 25px; text-align: center; cursor: pointer; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.vapc-upload-box:hover { filter: brightness(0.95); }
+.vapc-icon { font-size: 2.5rem; }
+.vapc-filename { font-weight: 800; font-size: 1rem; word-break: break-all; color: #111; }
+
+/* Khung Preview Video */
+.vapc-preview-container {
+    width: 100%; max-height: 380px; background: #000;
+    border: var(--neo-border); border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; box-shadow: inset 4px 4px 0px rgba(0,0,0,0.2);
+}
+#vapc-player { width: 100%; max-height: 380px; }
+
+/* Slider Tốc Độ */
+.vapc-val-display { font-size: 1.1rem; font-weight: 800; text-align: center; margin-bottom: 10px; color: #111; }
+.vapc-val-display span { color: #d90429; font-size: 1.5rem; font-weight: 900;}
+
+.vapc-timeline-wrapper {
+    background: #f1f3f5; border: 2px solid #111; border-radius: 12px; padding: 15px;
+    box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); margin-bottom: 15px;
+}
+.vapc-slider {
+    -webkit-appearance: none; width: 100%; height: 12px;
+    background: linear-gradient(to right, var(--clr-cyan) 0%, var(--clr-hotpink) 100%);
+    border: 2px solid #111; border-radius: 20px; outline: none;
+}
+.vapc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 25px; height: 25px; border-radius: 50%;
+    background: #111; border: 2px solid #fff; cursor: pointer;
+    box-shadow: 2px 2px 0px #111; transition: 0.1s;
+}
+.vapc-slider::-webkit-slider-thumb:active { transform: scale(0.9); box-shadow: 0px 0px 0px #111; }
+
+/* Quick Buttons */
+.vapc-quick-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.vapc-btn-quick {
+    background: #fff; border: 2px solid #111; border-radius: 8px; padding: 8px 12px;
+    font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s;
+}
+.vapc-btn-quick:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; background: var(--clr-yellow); }
+
+/* Select Box */
+.neo-select-wrapper { position: relative; }
+.neo-select {
+    width: 100%; appearance: none; background: #fff;
+    border: var(--neo-border); border-radius: 8px;
+    padding: 14px 15px; font-family: inherit; font-size: 0.95rem; font-weight: 700;
+    cursor: pointer; outline: none; box-shadow: 3px 3px 0px #111; transition: 0.2s; color: #111;
+}
+.neo-select:focus { transform: translate(-2px, -2px); box-shadow: 5px 5px 0px #111; background: #f0f8ff;}
+.neo-select-wrapper::after { content: "▼"; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 1rem; color: #111; font-weight: bold; }
+
+/* Nút Preview Audio (Mới) */
+.vapc-btn-preview {
+    width: 100%; padding: 12px; font-family: inherit; font-size: 1rem; font-weight: 800;
+    background: var(--clr-mint); border: 2px dashed #111; border-radius: 8px; cursor: pointer;
+    box-shadow: 3px 3px 0px #111; transition: 0.15s; color: #111; margin-top: 15px;
+}
+.vapc-btn-preview:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+.vapc-btn-preview:disabled { opacity: 0.6; cursor: not-allowed; background: #e9ecef; }
+
+.vapc-hint-text { font-size: 0.85rem; font-weight: 600; color: #333; margin-top: 15px; padding: 12px; background: var(--clr-yellow); border-radius: 8px; border: 1px dashed #111;}
+
+/* Nút Submit */
+.vapc-btn-primary {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-hotpink); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: 0.15s; color: #111; margin-top: 10px;
+}
+.vapc-btn-primary:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.vapc-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none; background: #ccc;}
+
+/* Khung Progress */
+.vapc-status-box { margin-top: 25px; padding: 20px; background: #fff; border: var(--neo-border); border-radius: 12px; text-align: center; box-shadow: 3px 3px 0px #111; }
+.vapc-status-box h4 { margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 900; color: #111; }
+.vapc-progress-bar { width: 100%; height: 24px; background: #eee; border: 2px solid #111; border-radius: 50px; overflow: hidden; }
+.vapc-progress-fill { width: 0%; height: 100%; background: var(--clr-cyan); transition: width 0.2s ease; border-right: 2px solid #111;}
