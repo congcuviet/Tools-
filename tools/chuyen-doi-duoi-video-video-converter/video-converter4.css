@@ -1,0 +1,79 @@
+.vconv-soft-wrapper {
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #fcfcfc;
+    --bg-card: #ffffff;
+    --clr-lime: #d9ed92;
+    --clr-lightblue: #b5e2fa;
+    --clr-coral: #ffb5a7;
+    --clr-warning: #fdf0d5;
+
+    max-width: 650px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.vconv-soft-wrapper * { box-sizing: border-box; }
+
+.vconv-soft-header {
+    background: var(--clr-lime); padding: 20px;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.vconv-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.vconv-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; }
+
+.vconv-body {
+    background: var(--bg-card); padding: 25px;
+    border: var(--neo-border); border-radius: 12px;
+    box-shadow: var(--neo-shadow);
+}
+
+.vconv-group { margin-bottom: 20px; transition: opacity 0.3s; }
+.vconv-label { font-weight: 900; font-size: 1rem; margin-bottom: 10px; display: block; }
+
+/* Khung Upload */
+.vconv-upload-box {
+    background: var(--clr-lightblue); border: 2px dashed #111; border-radius: 12px;
+    padding: 25px; text-align: center; cursor: pointer; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.vconv-upload-box:hover { filter: brightness(0.95); }
+.vconv-icon { font-size: 2.5rem; }
+.vconv-filename { font-weight: 800; font-size: 1rem; word-break: break-all; color: #111; }
+
+/* Select Box */
+.neo-select-wrapper { position: relative; }
+.neo-select {
+    width: 100%; appearance: none; background: #fff;
+    border: var(--neo-border); border-radius: 8px;
+    padding: 14px 15px; font-family: inherit; font-size: 0.95rem; font-weight: 700;
+    cursor: pointer; outline: none; box-shadow: 3px 3px 0px #111; transition: 0.2s; color: #111;
+}
+.neo-select:focus { transform: translate(-2px, -2px); box-shadow: 5px 5px 0px #111; background: #f0f8ff;}
+.neo-select:disabled { background: #e9ecef; cursor: not-allowed; box-shadow: none; transform: translate(3px, 3px); }
+.neo-select-wrapper::after { content: "▼"; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 1rem; color: #111; font-weight: bold; }
+
+.vconv-hint-text { font-size: 0.85rem; font-weight: 600; color: #333; margin-top: 15px; padding: 12px; background: var(--clr-warning); border-radius: 8px; border: 1px dashed #111;}
+
+/* Nút Submit */
+.vconv-btn-primary {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-coral); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: 0.15s; color: #111; margin-top: 10px;
+}
+.vconv-btn-primary:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.vconv-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none; background: #ccc;}
+
+/* Khung Progress */
+.vconv-status-box { margin-top: 25px; padding: 20px; background: #fff; border: var(--neo-border); border-radius: 12px; text-align: center; box-shadow: 3px 3px 0px #111; }
+.vconv-status-box h4 { margin: 0 0 10px 0; font-size: 1.05rem; font-weight: 900; color: #111; }
+.vconv-progress-bar { width: 100%; height: 24px; background: #eee; border: 2px solid #111; border-radius: 50px; overflow: hidden; }
+.vconv-progress-fill { width: 0%; height: 100%; background: var(--clr-lime); transition: width 0.2s ease; border-right: 2px solid #111;}
