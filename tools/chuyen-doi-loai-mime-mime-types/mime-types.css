@@ -1,0 +1,108 @@
+.mimet-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f4f4f5;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-red: #ff006e;
+    --clr-green: #06d6a0;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+
+    max-width: 950px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.mimet-soft-wrapper * { box-sizing: border-box; }
+
+.mimet-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.mimet-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-cyan); text-transform: uppercase;}
+.mimet-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* BỐ CỤC 2 CỘT */
+.mimet-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.mimet-col { display: flex; flex-direction: column; min-width: 0;}
+@media (min-width: 768px) { 
+    .mimet-main-layout { flex-direction: row; align-items: stretch; } 
+    .mimet-col-left { flex: 4; }
+    .mimet-col-right { flex: 6; }
+}
+
+/* CARDS */
+.mimet-card {
+    padding: 20px; border: var(--neo-border); background: #fff;
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%; transition: 0.3s;
+}
+.mimet-card-title { margin: 0 0 15px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed #111; padding-bottom: 10px; }
+.mimet-bg-yellow { background: var(--clr-yellow); }
+.mimet-bg-white { background: var(--clr-white); }
+.mimet-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* STATUS BADGE */
+.mimet-badge { background: #eee; padding: 4px 10px; border: 2px solid #111; border-radius: 6px; font-weight: 900; font-size: 0.85rem; box-shadow: 2px 2px 0px #111; transition: 0.2s;}
+.mimet-badge.active { background: var(--clr-green); color: #111; }
+.mimet-badge.error { background: var(--clr-red); color: #fff; }
+
+/* INPUT TIM KIEM */
+.mimet-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 8px; }
+.mimet-label { font-weight: 900; font-size: 0.95rem; }
+
+.mimet-search-wrapper { position: relative; display: flex; align-items: center; }
+.mimet-search-icon { position: absolute; left: 15px; font-size: 1.2rem; pointer-events: none;}
+.mimet-input {
+    width: 100%; padding: 15px 15px 15px 45px; border: 3px solid #111; border-radius: 8px;
+    font-size: 1.1rem; font-weight: bold; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); font-family: monospace;
+}
+.mimet-input:focus { border-color: var(--clr-cyan); box-shadow: 4px 4px 0px #111; transform: translate(-2px, -2px); transition: 0.2s;}
+
+/* BUTTON CLEAR */
+.mimet-btn-action {
+    width: 100%; padding: 12px; background: #fff; color: #111;
+    border: 2px solid #111; border-radius: 8px; font-size: 1rem; font-weight: 900;
+    cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s; text-transform: uppercase;
+}
+.mimet-btn-action:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+/* BẢNG KẾT QUẢ (TABLE) */
+.mimet-table-wrapper {
+    flex: 1; overflow-y: auto; max-height: 500px; border: 2px solid #111; border-radius: 8px; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); background: #fdfdfd;
+}
+/* Tuỳ biến thanh cuộn (Scrollbar) cho bảng */
+.mimet-table-wrapper::-webkit-scrollbar { width: 8px; }
+.mimet-table-wrapper::-webkit-scrollbar-track { background: #eee; border-left: 2px solid #111; }
+.mimet-table-wrapper::-webkit-scrollbar-thumb { background: #111; border-radius: 4px; }
+
+.mimet-table { width: 100%; border-collapse: collapse; text-align: left; font-family: monospace; font-size: 0.95rem; }
+.mimet-table th { background: #111; color: var(--clr-cyan); padding: 12px; font-weight: 900; border-bottom: 2px solid #111; position: sticky; top: 0; z-index: 1;}
+.mimet-table td { padding: 10px 12px; border-bottom: 1px solid #ccc; font-weight: bold; color: #111; vertical-align: middle;}
+.mimet-table tr:last-child td { border-bottom: none; }
+.mimet-table tr:hover td { background: #e0fbfc; }
+
+.mimet-ext-tag { background: #111; color: var(--clr-yellow); padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; font-weight: 900; border: 1px solid #111;}
+
+.mimet-btn-copy-td {
+    background: #fff; border: 2px solid #111; border-radius: 4px; padding: 4px 8px;
+    font-size: 0.8rem; font-weight: 900; cursor: pointer; float: right; transition: 0.1s; font-family: system-ui;
+}
+.mimet-btn-copy-td:active { background: #111; color: #fff; }
+
+.mimet-empty-state { text-align: center; color: #666; font-weight: 700; font-size: 1rem; margin-top: 40px; padding: 20px;}
+
+/* INFO BOX */
+.mimet-info-box { background: rgba(255,255,255,0.6); padding: 15px; border: 2px dashed #111; border-radius: 8px; }
+.mimet-info-box h4 { margin: 0 0 5px 0; font-weight: 900; color: #111; font-size: 1rem;}
+.mimet-tips-list { margin: 0; padding-left: 20px; font-size: 0.85rem; font-weight: 600; line-height: 1.6; color: #333;}
+.mimet-tips-list code { background: #fff; border: 1px solid #111; padding: 2px 4px; border-radius: 4px; font-weight: bold; }
