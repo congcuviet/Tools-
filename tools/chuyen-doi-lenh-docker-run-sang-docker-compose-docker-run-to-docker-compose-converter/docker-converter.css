@@ -1,0 +1,111 @@
+.dock-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f4f4f5;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-red: #ff006e;
+    --clr-green: #06d6a0;
+    --clr-white: #ffffff;
+    --clr-blue: #2496ed; /* Màu Docker */
+    --clr-text: #111111;
+
+    max-width: 1100px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.dock-soft-wrapper * { box-sizing: border-box; }
+
+.dock-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 20px; box-shadow: var(--neo-shadow);
+}
+.dock-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-blue); text-transform: uppercase;}
+.dock-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+.dock-soft-header code { background: #333; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: var(--clr-cyan);}
+
+/* BỐ CỤC 2 CỘT */
+.dock-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.dock-col { display: flex; flex-direction: column; gap: 20px; min-width: 0;}
+@media (min-width: 768px) { 
+    .dock-main-layout { flex-direction: row; align-items: stretch; } 
+    .dock-col-left { flex: 5; }
+    .dock-col-right { flex: 5; }
+}
+
+/* CARDS */
+.dock-card {
+    padding: 20px; border: var(--neo-border); background: #fff;
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%; transition: 0.3s;
+}
+.dock-bg-yellow { background: var(--clr-yellow); }
+.dock-bg-white { background: var(--clr-white); }
+.dock-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+.dock-section-title { font-size: 1.1rem; font-weight: 900; color: #111; text-transform: uppercase; }
+
+/* NÚT ĐIỀN NHANH */
+.dock-quick-fills { display: flex; gap: 8px; align-items: center; margin: 15px 0; flex-wrap: wrap; }
+.dock-btn-chip {
+    background: #fff; color: #111; padding: 4px 10px; border: 2px solid #111; border-radius: 6px;
+    font-size: 0.85rem; font-weight: 900; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; font-family: monospace;
+}
+.dock-btn-chip:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* NÚT TẠO (CONVERT) */
+.dock-btn-action {
+    width: 100%; background: #111; color: var(--clr-cyan); padding: 15px; margin-top: auto;
+    border: 3px solid #111; border-radius: 8px; font-size: 1.1rem; font-weight: 900;
+    cursor: pointer; box-shadow: 4px 4px 0px #111; transition: 0.1s; text-transform: uppercase;
+}
+.dock-btn-action:active { transform: translate(4px, 4px); box-shadow: 0px 0px 0px #111; }
+
+.dock-btn-small {
+    padding: 6px 12px; background: #fff; border: 2px solid #111; border-radius: 6px;
+    font-weight: 900; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.dock-btn-small:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* NÚT COPY & BADGE */
+.dock-btn-copy {
+    background: #111; color: var(--clr-cyan); padding: 8px 15px; border: 2px solid #111; border-radius: 6px;
+    font-size: 0.95rem; font-weight: 900; cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s; white-space: nowrap;
+}
+.dock-btn-copy:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+.dock-badge { background: #eee; padding: 6px 10px; border: 2px solid #111; border-radius: 6px; font-weight: 900; font-size: 0.85rem; box-shadow: 2px 2px 0px #111; white-space: nowrap;}
+.dock-badge.active { background: var(--clr-green); color: #111; }
+.dock-badge.error { background: var(--clr-red); color: #fff; }
+
+/* TEXTAREA */
+.dock-textarea {
+    width: 100%; min-height: 250px; flex: 1; padding: 15px; border: 3px solid #111; border-radius: 8px;
+    font-size: 1.05rem; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); font-family: monospace; resize: vertical; line-height: 1.6; white-space: pre-wrap; background: #fff; color: #111; font-weight: bold;
+}
+.dock-textarea:focus { border-color: var(--clr-blue); box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05), 0 0 0 3px #111; }
+.dock-textarea-output { background: #fdfdfd; cursor: default; white-space: pre; color: #333;}
+
+/* BÁO LỖI OVERLAY */
+.dock-error-overlay {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+    background: rgba(255, 0, 110, 0.1); backdrop-filter: blur(2px); border: 3px dashed var(--clr-red); border-radius: 8px;
+    padding: 20px; z-index: 10; color: #a00; overflow-y: auto; font-family: monospace;
+}
+.dock-error-overlay strong { display: block; font-size: 1.1rem; margin-bottom: 10px; color: var(--clr-red); font-family: system-ui;}
+#dock-error-msg { font-size: 0.95rem; font-weight: bold; white-space: pre-wrap; line-height: 1.5; color: #111; background: #fff; padding: 10px; border: 1px solid #111; border-radius: 4px;}
+
+/* INFO BOX */
+.dock-info-box { background: rgba(255,255,255,0.6); padding: 15px; border: 2px dashed #111; border-radius: 8px;}
+.dock-info-box h4 { margin: 0 0 8px 0; font-weight: 900; color: #111; font-size: 1rem;}
+.dock-info-box p { margin: 0; font-size: 0.9rem; font-weight: 600; line-height: 1.6; color: #333;}
+.dock-info-box code { background: #fff; border: 1px solid #111; padding: 2px 4px; border-radius: 4px; font-family: monospace; }
