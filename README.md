@@ -50,6 +50,16 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Chuyển đổi CSV sang JSON (CSV to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-csv-sang-json-csv-to-json-converter/) |
 | Chuyển đổi danh sách – List converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-danh-sach-list-converter/) |
 
+| Chuyển đổi địa chỉ IPv4 – IPv4 address converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-dia-chi-ipv4-ipv4-address-converter/) |
+| Chuyển đổi đuôi nhạc – Audio Converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-duoi-nhac-audio-converter/) |
+| Chuyển đổi đuôi Video – Video Converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-duoi-video-video-converter/) |
+| Chuyển đổi file sang Base64 – Base64 file converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-file-sang-base64-base64-file-converter/) |
+| Chuyển đổi JSON sang CSV (JSON to CSV Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-json-sang-csv-json-to-csv-converter/) |
+| Chuyển đổi JSON sang TOML (JSON to TOML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-json-sang-toml-json-to-toml-converter/) |
+| Chuyển đổi JSON sang XML (JSON to XML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-json-sang-xml-json-to-xml-converter/) |
+| Chuyển đổi JSON sang YAML (JSON to YAML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-json-sang-yaml-json-to-yaml-converter/) |
+| Chuyển đổi lệnh Docker run sang Docker compose – Docker run to Docker compose converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-lenh-docker-run-sang-docker-compose-docker-run-to-docker-compose-converter/) |
+| Chuyển đổi loại MIME – MIME types | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-loai-mime-mime-types/) |
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
 ## Theo dõi Công Cụ Việt
