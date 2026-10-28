@@ -1,0 +1,80 @@
+.ffconv-soft-wrapper {
+    /* Biến nội bộ - Không dùng :root */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    --neo-shadow-active: 0px 0px 0px #111111;
+    
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --clr-mint: #b9fbc0;
+    --clr-purple: #cdb4db;
+    --clr-yellow: #fdf0d5;
+    --clr-sky: #a2d2ff;
+
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #111;
+    background: var(--bg-main);
+    padding: 25px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: var(--neo-shadow);
+}
+.ffconv-soft-wrapper * { box-sizing: border-box; }
+
+.ffconv-soft-header {
+    background: var(--clr-purple); padding: 20px;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.ffconv-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase;}
+.ffconv-soft-header p { margin: 0; font-weight: 700; font-size: 0.95rem; }
+
+.ffconv-body {
+    background: var(--bg-card); padding: 25px;
+    border: var(--neo-border); border-radius: 12px;
+    box-shadow: var(--neo-shadow);
+}
+
+.ffconv-group { margin-bottom: 20px; }
+.ffconv-label { font-weight: 900; font-size: 1.05rem; display: block; margin-bottom: 10px; }
+
+/* Khung Upload Mềm Mại */
+.ffconv-upload-box {
+    background: var(--clr-yellow); border: 2px dashed #111; border-radius: 12px;
+    padding: 20px; text-align: center; cursor: pointer; transition: 0.2s;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+.ffconv-upload-box:hover { background: #ffe4a0; }
+.ffconv-icon { font-size: 2rem; }
+.ffconv-filename { font-weight: 700; font-size: 0.95rem; word-break: break-all; color: #444; }
+
+/* Select Box Neo */
+.neo-select-wrapper { position: relative; }
+.neo-select {
+    width: 100%; appearance: none; background: #fff;
+    border: var(--neo-border); border-radius: 8px;
+    padding: 14px 20px; font-family: inherit; font-size: 1.05rem; font-weight: 700;
+    cursor: pointer; outline: none; box-shadow: 3px 3px 0px #111; transition: 0.2s; color: #111;
+}
+.neo-select:focus { transform: translate(-2px, -2px); box-shadow: 5px 5px 0px #111; background: #f0f8ff;}
+.neo-select-wrapper::after { content: "▼"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); pointer-events: none; font-size: 1rem; color: #111; font-weight: bold; }
+
+/* Nút Submit */
+.ffconv-btn-primary {
+    width: 100%; padding: 18px; font-family: inherit; font-size: 1.15rem; font-weight: 900; text-transform: uppercase;
+    background: var(--clr-sky); border: var(--neo-border); border-radius: 12px; cursor: pointer;
+    box-shadow: var(--neo-shadow); transition: 0.15s; color: #111; margin-top: 10px;
+}
+.ffconv-btn-primary:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: var(--neo-shadow-active); }
+.ffconv-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(1); box-shadow: none; transform: none; }
+
+/* Khung Progress */
+.ffconv-status-box {
+    margin-top: 25px; padding: 15px; background: #f1f3f5;
+    border: 2px dashed #111; border-radius: 12px; text-align: center;
+}
+.ffconv-status-box h4 { margin: 0 0 10px 0; font-size: 1rem; font-weight: 800; color: #333; }
+.ffconv-progress-bar { width: 100%; height: 20px; background: #fff; border: 2px solid #111; border-radius: 50px; overflow: hidden; }
+.ffconv-progress-fill { width: 0%; height: 100%; background: var(--clr-mint); transition: width 0.3s ease; border-right: 2px solid #111;}
