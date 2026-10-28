@@ -1,0 +1,111 @@
+.ip4v-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f4f4f5;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-red: #ff006e;
+    --clr-green: #06d6a0;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+
+    max-width: 1050px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.ip4v-soft-wrapper * { box-sizing: border-box; }
+
+.ip4v-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 20px; box-shadow: var(--neo-shadow);
+}
+.ip4v-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-cyan); text-transform: uppercase;}
+.ip4v-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* BỐ CỤC 2 CỘT */
+.ip4v-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.ip4v-col { display: flex; flex-direction: column; gap: 20px; min-width: 0;}
+@media (min-width: 768px) { 
+    .ip4v-main-layout { flex-direction: row; align-items: stretch; } 
+    .ip4v-col-left { flex: 4; }
+    .ip4v-col-right { flex: 6; }
+}
+
+/* CARDS */
+.ip4v-card {
+    padding: 20px; border: var(--neo-border); background: #fff;
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%; transition: 0.3s;
+}
+.ip4v-bg-yellow { background: var(--clr-yellow); }
+.ip4v-bg-white { background: var(--clr-white); }
+.ip4v-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+.ip4v-section-title { font-size: 1.1rem; font-weight: 900; color: #111; text-transform: uppercase; }
+
+/* INPUT & NÚT TRÁI */
+.ip4v-input-wrapper { display: flex; gap: 10px; margin-bottom: 15px; }
+
+.ip4v-input-huge {
+    margin: 0; flex: 1; min-width: 0; padding: 15px; border: 3px solid #111; border-radius: 8px;
+    font-size: 1.2rem; font-weight: 900; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); font-family: monospace;
+}
+.ip4v-input-huge:focus { border-color: var(--clr-cyan); }
+
+.ip4v-btn-myip {
+    background: #fff; color: #111; padding: 0 15px; border: 3px solid #111; border-radius: 8px;
+    font-size: 0.95rem; font-weight: 900; cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s; white-space: nowrap;
+}
+.ip4v-btn-myip:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+.ip4v-quick-fills { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+.ip4v-btn-chip {
+    background: #fff; color: #111; padding: 4px 10px; border: 2px solid #111; border-radius: 6px;
+    font-size: 0.85rem; font-weight: 900; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; font-family: monospace;
+}
+.ip4v-btn-chip:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+.ip4v-btn-small {
+    padding: 6px 12px; background: #fff; border: 2px solid #111; border-radius: 6px;
+    font-weight: 900; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.ip4v-btn-small:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* TRẠNG THÁI LỖI (STATUS BOX) */
+.ip4v-status-box {
+    background: #eee; border: 2px solid #111; border-radius: 8px; padding: 15px; font-weight: 900;
+    text-align: center; color: #555; transition: 0.2s;
+}
+.ip4v-status-box.active { background: var(--clr-green); color: #111; box-shadow: 3px 3px 0px #111; }
+.ip4v-status-box.error { background: var(--clr-red); color: #fff; box-shadow: 3px 3px 0px #111; }
+
+/* KHUNG KẾT QUẢ BÊN PHẢI (OUTPUT GROUPS) */
+.ip4v-result-group { margin-bottom: 15px; }
+.ip4v-result-group label { display: block; font-size: 0.85rem; font-weight: 900; color: #555; margin-bottom: 5px; text-transform: uppercase; }
+
+.ip4v-input-group { display: flex; gap: 8px; }
+.ip4v-input-item {
+    flex: 1; min-width: 0; padding: 10px 15px; border: 2px solid #111; border-radius: 6px;
+    font-family: monospace; font-size: 1.05rem; font-weight: bold; background: #fdfdfd; color: #111; box-shadow: inset 2px 2px 0px rgba(0,0,0,0.03); outline: none;
+}
+.ip4v-input-item:focus { border-color: var(--clr-cyan); }
+
+.ip4v-btn-copy-item {
+    background: #111; color: var(--clr-cyan); padding: 0 15px; border: 2px solid #111; border-radius: 6px;
+    font-size: 0.85rem; font-weight: 900; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; white-space: nowrap;
+}
+.ip4v-btn-copy-item:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* INFO BOX */
+.ip4v-info-box { background: rgba(255,255,255,0.6); padding: 15px; border: 2px dashed #111; border-radius: 8px;}
+.ip4v-info-box h4 { margin: 0 0 5px 0; font-weight: 900; color: #111; font-size: 1rem;}
+.ip4v-info-box p { margin: 0; font-size: 0.9rem; font-weight: 600; line-height: 1.5; color: #333;}
