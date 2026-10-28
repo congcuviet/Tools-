@@ -1,0 +1,120 @@
+.b64f-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f0f4f8;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-blue: #3a86ff;
+    --clr-red: #ff006e;
+    --clr-green: #06d6a0;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+
+    max-width: 950px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.b64f-soft-wrapper * { box-sizing: border-box; }
+
+.b64f-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 20px; box-shadow: var(--neo-shadow);
+}
+.b64f-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-yellow); text-transform: uppercase;}
+.b64f-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* CẢNH BÁO BẢO MẬT */
+.b64f-alert-box {
+    display: flex; align-items: center; gap: 15px; background: #e0fbfc; border: 2px dashed #111; 
+    border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 3px 3px 0px #111;
+}
+.b64f-alert-icon { font-size: 2rem; }
+.b64f-alert-content { font-size: 0.9rem; font-weight: 600; color: #111; line-height: 1.5; }
+.b64f-alert-content strong { color: var(--clr-blue); font-size: 1rem; display: block; margin-bottom: 3px;}
+
+/* BỐ CỤC 2 CỘT */
+.b64f-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.b64f-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px;}
+@media (min-width: 768px) { .b64f-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* CARDS */
+.b64f-card {
+    padding: 20px; border: var(--neo-border); 
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%;
+}
+.b64f-bg-yellow { background: var(--clr-yellow); }
+.b64f-bg-white { background: var(--clr-white); }
+.b64f-card-title { margin: 0 0 15px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed #111; padding-bottom: 10px; }
+.b64f-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* DRAG & DROP ZONE */
+.b64f-dropzone {
+    background: #fff; border: 3px dashed #111; border-radius: 10px; padding: 30px 20px;
+    text-align: center; cursor: pointer; transition: 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px;
+}
+.b64f-dropzone.dragover { background: var(--clr-cyan); border-style: solid; box-shadow: inset 4px 4px 0px rgba(0,0,0,0.1); }
+.b64f-drop-icon { font-size: 3.5rem; line-height: 1; animation: b64fFloat 2s ease-in-out infinite; }
+@keyframes b64fFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.b64f-drop-text { font-size: 1rem; font-weight: 800; color: #333; }
+
+.b64f-btn-select {
+    padding: 12px 20px; background: #111; color: var(--clr-yellow); border: 2px solid #111;
+    border-radius: 8px; font-weight: 900; font-size: 1rem; cursor: pointer; box-shadow: 3px 3px 0px rgba(0,0,0,0.3); transition: 0.1s; text-transform: uppercase;
+}
+.b64f-btn-select:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px transparent; }
+
+/* FILE INFO */
+.b64f-file-info { margin-top: 15px; padding: 15px; background: #fff; border: 2px solid #111; border-radius: 8px; font-size: 0.95rem; box-shadow: 2px 2px 0px #111; display: flex; flex-direction: column; gap: 5px;}
+.b64f-info-row { display: flex; gap: 8px; align-items: flex-start;}
+.b64f-lbl { color: #555; font-weight: bold; white-space: nowrap;}
+.b64f-file-info b { color: #111; word-break: break-all;}
+.b64f-text-cyan { color: var(--clr-blue) !important; background: #e0fbfc; padding: 2px 6px; border-radius: 4px; border: 1px solid #111;}
+
+.b64f-warning-msg { margin-top: 15px; padding: 10px; background: var(--clr-red); color: #fff; font-weight: 800; font-size: 0.9rem; border: 2px solid #111; border-radius: 8px; text-align: center; animation: b64fShake 0.4s; }
+@keyframes b64fShake { 0% { transform: translateX(0); } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-5px); } 100% { transform: translateX(0); } }
+
+/* KẾT QUẢ & UI TRẠNG THÁI */
+.b64f-badge { background: #eee; padding: 4px 10px; border: 2px solid #111; border-radius: 6px; font-weight: 900; font-size: 0.85rem; box-shadow: 2px 2px 0px #111; }
+.b64f-badge-success { background: var(--clr-green); color: #111; }
+
+.b64f-empty-state { text-align: center; color: #666; font-weight: 700; font-size: 1rem; font-style: italic; margin-top: 40px; }
+.b64f-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; margin-top: 40px; font-weight: 900; color: var(--clr-blue); }
+.b64f-spinner { width: 40px; height: 40px; border: 4px solid rgba(0,0,0,0.1); border-top-color: var(--clr-blue); border-radius: 50%; animation: b64fSpin 1s linear infinite; }
+@keyframes b64fSpin { to { transform: rotate(360deg); } }
+
+/* TEXTAREA & BUTTONS RESULT */
+.b64f-result-area { display: flex; flex-direction: column; flex: 1; }
+.b64f-group { display: flex; flex-direction: column; gap: 8px; flex: 1;}
+.b64f-label { font-weight: 900; font-size: 0.95rem; }
+
+.b64f-textarea {
+    width: 100%; min-height: 120px; padding: 12px; border: 2px solid #111; border-radius: 8px;
+    font-size: 0.9rem; font-weight: bold; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05);
+    font-family: monospace; resize: vertical; word-break: break-all; background: #fdfdfd; color: #333;
+}
+
+.b64f-btn-action {
+    width: 100%; padding: 10px; background: #fff; color: #111;
+    border: 2px solid #111; border-radius: 8px; font-weight: 900; font-size: 0.9rem; cursor: pointer;
+    box-shadow: 3px 3px 0px #111; transition: 0.1s; text-transform: uppercase;
+}
+.b64f-btn-action:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+.b64f-btn-main {
+    width: 100%; padding: 12px; background: #111; color: var(--clr-cyan);
+    border: 2px solid #111; border-radius: 8px; font-size: 1rem; font-weight: 900;
+    cursor: pointer; box-shadow: 3px 3px 0px #111; transition: 0.1s; text-transform: uppercase;
+}
+.b64f-btn-main:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+.b64f-divider { border: 0; border-top: 2px dashed #111; margin: 15px 0; opacity: 0.2; }
