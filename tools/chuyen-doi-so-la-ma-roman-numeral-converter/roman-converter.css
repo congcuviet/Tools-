@@ -1,0 +1,94 @@
+.romanc-soft-wrapper {
+    /* Biến cục bộ, cách ly CSS */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 6px 6px 0px #111111;
+    
+    --bg-main: #f8f9fa;
+    --clr-gold: #ffc300;
+    --clr-white: #ffffff;
+    --clr-red: #d90429;
+    --clr-blue: #0077b6;
+    --clr-green: #06d6a0;
+    --clr-text: #111111;
+
+    max-width: 900px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 8px 8px 0px #111111;
+}
+
+.romanc-soft-wrapper * { box-sizing: border-box; }
+
+.romanc-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.romanc-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-gold); text-transform: uppercase;}
+.romanc-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; line-height: 1.5; color: #eee; }
+
+.romanc-body { padding: 0; }
+
+/* BỐ CỤC */
+.romanc-main-layout { display: flex; flex-direction: column; gap: 20px; position: relative; }
+.romanc-col { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+@media (min-width: 768px) { .romanc-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* BIỂU TƯỢNG ĐỒNG BỘ Ở GIỮA TRÊN PC */
+.romanc-sync-icon { display: none; }
+@media (min-width: 768px) {
+    .romanc-sync-icon {
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2.5rem; font-weight: bold; color: #111; padding: 0 10px;
+        text-shadow: 2px 2px 0px var(--clr-gold);
+    }
+}
+
+/* CARDS */
+.romanc-card {
+    padding: 25px 20px; border: var(--neo-border); 
+    border-radius: 12px; box-shadow: var(--neo-shadow); height: 100%; display: flex; flex-direction: column;
+}
+.romanc-bg-yellow { background: var(--clr-gold); }
+.romanc-bg-white { background: var(--clr-white); }
+
+.romanc-card-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px dashed #111; padding-bottom: 15px; margin-bottom: 20px; }
+.romanc-card-title { margin: 0; font-size: 1.15rem; font-weight: 900; color: #111;}
+
+/* BUTTON COPY */
+.romanc-btn-copy {
+    padding: 6px 12px; background: #fff; border: 2px solid #111; border-radius: 6px;
+    font-size: 0.85rem; font-weight: 800; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.romanc-btn-copy:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* INPUTS */
+.romanc-input-wrapper { display: flex; flex-direction: column; flex: 1; justify-content: center; }
+.romanc-big-input {
+    width: 100%; padding: 15px; border: 3px solid #111; border-radius: 10px; 
+    font-weight: 900; font-size: 2rem; color: #111; outline: none; box-shadow: inset 4px 4px 0px rgba(0,0,0,0.06);
+    font-family: inherit; text-align: center; background: #fff; transition: 0.2s;
+}
+.romanc-big-input:focus { border-color: var(--clr-blue); box-shadow: 4px 4px 0px #111; transform: translate(-2px, -2px); }
+
+/* LỖI */
+.romanc-error-msg {
+    margin-top: 15px; padding: 10px; background: var(--clr-red); color: #fff; 
+    font-weight: 800; font-size: 0.9rem; border: 2px solid #111; border-radius: 8px; text-align: center;
+}
+
+/* CHEAT SHEET */
+.romanc-cheat-sheet {
+    margin-top: 25px; padding: 20px; background: #e0fbfc; border: var(--neo-border); border-radius: 12px; box-shadow: 4px 4px 0px #111;
+}
+.romanc-cheat-sheet h4 { margin: 0 0 15px 0; font-size: 1.1rem; font-weight: 900; text-align: center; }
+.romanc-badges-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.romanc-badge {
+    background: #111; color: var(--clr-gold); font-weight: 900; font-size: 1rem;
+    padding: 6px 15px; border-radius: 6px; box-shadow: 2px 2px 0px #fff; border: 1px solid #111;
+}
