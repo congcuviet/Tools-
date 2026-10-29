@@ -1,0 +1,99 @@
+.tempc-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f8f9fa;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #9bf6ff;
+    --clr-pink: #ffc6ff;
+    --clr-green: #caffbf;
+    --clr-dark: #333333;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+
+    max-width: 900px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.tempc-soft-wrapper * { box-sizing: border-box; }
+
+.tempc-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.tempc-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-yellow); text-transform: uppercase;}
+.tempc-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* BỐ CỤC 2 CỘT */
+.tempc-main-layout { display: flex; flex-direction: column; gap: 20px; }
+.tempc-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px;}
+@media (min-width: 768px) { .tempc-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* CARDS */
+.tempc-card {
+    padding: 20px; border: var(--neo-border); 
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%;
+}
+.tempc-bg-yellow { background: var(--clr-yellow); }
+.tempc-bg-white { background: var(--clr-white); }
+.tempc-card-title { margin: 0 0 15px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed rgba(0,0,0,0.3); padding-bottom: 10px; }
+
+/* INPUT GROUP */
+.tempc-input-wrapper { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.tempc-big-input {
+    width: 100%; padding: 15px; border: 3px solid #111; border-radius: 10px; text-align: center;
+    font-size: 2.5rem; font-weight: 900; color: #111; outline: none; background: #fff; 
+    box-shadow: inset 4px 4px 0px rgba(0,0,0,0.05); transition: 0.2s; font-family: monospace;
+}
+.tempc-big-input:focus { border-color: var(--clr-cyan); box-shadow: 4px 4px 0px #111; transform: translate(-2px, -2px); }
+
+.tempc-unit-select {
+    width: 100%; padding: 12px; border: 3px solid #111; border-radius: 8px; background: #fff;
+    font-weight: 900; font-size: 1.1rem; cursor: pointer; outline: none; box-shadow: 3px 3px 0px #111; text-align: center;
+}
+.tempc-unit-select:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* PRESETS */
+.tempc-presets { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }
+.tempc-preset-lbl { font-weight: 900; font-size: 0.85rem; width: 100%; text-align: center; margin-bottom: 5px;}
+.tempc-btn-preset {
+    background: #fff; border: 2px solid #111; border-radius: 6px; padding: 6px 12px;
+    font-weight: 800; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.tempc-btn-preset:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* KẾT QUẢ ĐẦU RA */
+.tempc-results-grid { display: flex; flex-direction: column; gap: 15px; flex: 1; }
+.tempc-res-box { border: 3px solid #111; border-radius: 10px; padding: 15px; box-shadow: 3px 3px 0px #111; display: flex; flex-direction: column; }
+.tempc-bg-green { background: var(--clr-green); }
+.tempc-bg-pink { background: var(--clr-pink); }
+.tempc-bg-cyan { background: var(--clr-cyan); }
+.tempc-bg-dark { background: var(--clr-dark); color: #fff; }
+
+.tempc-res-header { font-size: 0.9rem; font-weight: 900; border-bottom: 2px dashed rgba(0,0,0,0.2); padding-bottom: 5px; margin-bottom: 10px; text-transform: uppercase;}
+.tempc-bg-dark .tempc-res-header { border-bottom-color: rgba(255,255,255,0.2); }
+
+.tempc-res-value-row { display: flex; align-items: center; justify-content: space-between; }
+.tempc-res-number { font-size: 2rem; font-weight: 900; font-family: monospace; word-break: break-all; flex: 1; }
+.tempc-res-symbol { font-size: 1.5rem; font-weight: 900; margin: 0 10px; opacity: 0.8; }
+
+.tempc-btn-copy {
+    background: #fff; border: 2px solid #111; border-radius: 6px; width: 40px; height: 40px;
+    font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.tempc-btn-copy:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+/* FORMULA BOX */
+.tempc-formula-box { margin-top: 20px; padding: 15px; background: #e0fbfc; border: 2px dashed #111; border-radius: 8px; box-shadow: inset 2px 2px 0px rgba(0,0,0,0.05); }
+.tempc-formula-title { font-weight: 900; font-size: 0.9rem; margin-bottom: 5px; }
+.tempc-formula-box code { font-family: monospace; font-size: 1rem; font-weight: bold; color: #111; background: rgba(0,0,0,0.1); padding: 4px 8px; border-radius: 4px; display: inline-block; }
