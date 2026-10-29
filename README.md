@@ -60,6 +60,17 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Chuyển đổi JSON sang YAML (JSON to YAML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-json-sang-yaml-json-to-yaml-converter/) |
 | Chuyển đổi lệnh Docker run sang Docker compose – Docker run to Docker compose converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-lenh-docker-run-sang-docker-compose-docker-run-to-docker-compose-converter/) |
 | Chuyển đổi loại MIME – MIME types | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-loai-mime-mime-types/) |
+
+| Chuyển đổi Markdown sang HTML (Markdown to HTML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-markdown-sang-html-markdown-to-html-converter/) |
+| Chuyển đổi nhiệt độ – Temperature converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-nhiet-do-temperature-converter/) |
+| Chuyển đổi Số La Mã – Roman numeral converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-so-la-ma-roman-numeral-converter/) |
+| Chuyển đổi TOML sang JSON (TOML to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-toml-sang-json-toml-to-json-converter/) |
+| Chuyển đổi TOML sang YAML (TOML to YAML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-toml-sang-yaml-toml-to-yaml-converter/) |
+| Chuyển đổi văn bản sang bảng chữ cái NATO – Text to NATO alphabet | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-van-ban-sang-bang-chu-cai-nato-text-to-nato-alphabet/) |
+| Chuyển đổi văn bản sang mã nhị phân ASCII – Text to ASCII binary | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-van-ban-sang-ma-nhi-phan-ascii-text-to-ascii-binary/) |
+| Chuyển đổi XML sang JSON (XML to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-xml-sang-json-xml-to-json-converter/) |
+| Chuyển đổi YAML sang JSON (YAML to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-yaml-sang-json-yaml-to-json-converter/) |
+| Chuyển đổi YAML sang TOML (YAML to TOML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-yaml-sang-toml-yaml-to-toml-converter/) |
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
 ## Theo dõi Công Cụ Việt
