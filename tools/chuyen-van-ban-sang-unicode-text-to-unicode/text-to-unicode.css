@@ -1,0 +1,108 @@
+.uni-soft-wrapper {
+    /* Biến CSS độc lập */
+    --neo-border: 3px solid #111111;
+    --neo-shadow: 5px 5px 0px #111111;
+    
+    --bg-main: #f8f9fa;
+    --clr-yellow: #fde74c;
+    --clr-cyan: #00f5d4;
+    --clr-pink: #ff006e;
+    --clr-green: #06d6a0;
+    --clr-white: #ffffff;
+    --clr-text: #111111;
+
+    max-width: 950px; 
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--clr-text);
+    background: var(--bg-main);
+    padding: 20px;
+    border: var(--neo-border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0px #111111;
+}
+
+.uni-soft-wrapper * { box-sizing: border-box; }
+
+.uni-soft-header {
+    background: #111; padding: 20px; color: #fff;
+    border: var(--neo-border); border-radius: 12px;
+    text-align: center; margin-bottom: 25px; box-shadow: var(--neo-shadow);
+}
+.uni-soft-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; color: var(--clr-yellow); text-transform: uppercase;}
+.uni-soft-header p { margin: 0; font-weight: 600; font-size: 0.95rem; color: #ccc;}
+
+/* TABS (MODE SELECTOR) */
+.uni-mode-selector { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+.uni-mode-btn { flex: 1; cursor: pointer; min-width: 150px; }
+.uni-mode-btn input { display: none; }
+.uni-mode-content {
+    display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px;
+    border: var(--neo-border); border-radius: 10px; background: #fff; box-shadow: 3px 3px 0px #111;
+    transition: 0.15s; filter: grayscale(1); opacity: 0.7;
+}
+.uni-mode-btn input:checked + .uni-mode-content { filter: grayscale(0); opacity: 1; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.1); border-width: 3px; }
+.uni-bg-yellow { background: var(--clr-yellow); }
+.uni-bg-cyan { background: var(--clr-cyan); }
+.uni-mode-icon { font-size: 1.5rem; }
+.uni-mode-text { font-weight: 900; font-size: 1rem; text-transform: uppercase; }
+
+/* BỐ CỤC 2 CỘT */
+.uni-main-layout { display: flex; flex-direction: column; gap: 20px; position: relative; }
+.uni-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px;}
+@media (min-width: 768px) { .uni-main-layout { flex-direction: row; align-items: stretch; } }
+
+/* SWAP ZONE (Nút hoán đổi) */
+.uni-swap-zone { display: flex; align-items: center; justify-content: center; padding: 10px 0; }
+@media (min-width: 768px) { .uni-swap-zone { flex-direction: column; padding: 0 10px; } }
+.uni-btn-swap {
+    background: #111; color: var(--clr-yellow); width: 45px; height: 45px; border: 2px solid #111;
+    border-radius: 50%; font-size: 1.5rem; font-weight: bold; cursor: pointer; box-shadow: 3px 3px 0px #111;
+    transition: 0.2s; display: flex; align-items: center; justify-content: center; z-index: 10;
+}
+.uni-btn-swap:active { transform: rotate(180deg) scale(0.9); box-shadow: 0px 0px 0px #111; }
+
+/* CARDS */
+.uni-card {
+    padding: 20px; border: var(--neo-border); background: #fff;
+    border-radius: 12px; box-shadow: var(--neo-shadow); display: flex; flex-direction: column; height: 100%; transition: 0.3s;
+}
+.uni-card-title { margin: 0 0 15px 0; font-size: 1.2rem; font-weight: 900; border-bottom: 2px dashed #111; padding-bottom: 10px; }
+.uni-bg-white { background: var(--clr-white); }
+.uni-flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* STATUS BADGE */
+.uni-badge { background: #eee; padding: 4px 10px; border: 2px solid #111; border-radius: 6px; font-weight: 900; font-size: 0.85rem; box-shadow: 2px 2px 0px #111; transition: 0.2s;}
+.uni-badge.active { background: var(--clr-green); color: #111; }
+.uni-badge.error { background: var(--clr-pink); color: #fff; }
+
+/* TEXTAREA */
+.uni-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 8px; }
+.uni-label { font-weight: 900; font-size: 0.95rem; }
+
+.uni-textarea {
+    width: 100%; min-height: 250px; flex: 1; padding: 15px; border: 3px solid #111; border-radius: 8px;
+    font-size: 1.05rem; font-weight: bold; outline: none; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05); font-family: monospace; resize: vertical; line-height: 1.5;
+}
+.uni-textarea:focus { border-color: #111; box-shadow: inset 3px 3px 0px rgba(0,0,0,0.05), 0 0 0 3px #111; }
+.uni-textarea-output { background: #fdfdfd; word-break: break-all; color: #111; font-size: 1.15rem; letter-spacing: 1px;}
+
+/* BUTTONS */
+.uni-btn-small {
+    padding: 6px 12px; background: #fff; border: 2px solid #111; border-radius: 6px;
+    font-weight: 900; font-size: 0.85rem; cursor: pointer; box-shadow: 2px 2px 0px #111; transition: 0.1s; color: #111;
+}
+.uni-btn-small:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px #111; }
+
+.uni-btn-main {
+    width: 100%; padding: 15px; background: #111; color: var(--clr-cyan); margin-top: auto;
+    border: 2px solid #111; border-radius: 8px; font-size: 1.1rem; font-weight: 900;
+    cursor: pointer; box-shadow: 4px 4px 0px #111; transition: 0.1s; text-transform: uppercase;
+}
+.uni-btn-main:active { transform: translate(4px, 4px); box-shadow: 0px 0px 0px #111; }
+
+/* INFO BOX */
+.uni-info-box { background: rgba(255,255,255,0.6); padding: 15px; border: 2px dashed #111; border-radius: 8px; margin-top: 20px;}
+.uni-info-box h4 { margin: 0 0 5px 0; font-weight: 900; color: #111; font-size: 1rem;}
+.uni-info-box p { margin: 0; font-size: 0.9rem; font-weight: 600; line-height: 1.5; color: #333;}
+.uni-info-box code { background: #fff; border: 1px solid #111; padding: 2px 5px; border-radius: 4px; font-weight: bold; }
