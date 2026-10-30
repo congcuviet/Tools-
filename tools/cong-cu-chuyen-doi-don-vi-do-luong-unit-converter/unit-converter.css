@@ -1,0 +1,98 @@
+/* GIAO DIỆN SOFT BRUTALISM & NAMESPACED - UNIT CONVERTER */
+.unitconv-container {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    max-width: 900px; margin: 20px auto;
+    border: 3px solid #111111; border-radius: 12px;
+    box-shadow: 6px 6px 0px #111111; padding: 30px;
+    background: #ffffff; color: #111111; box-sizing: border-box;
+}
+
+.unitconv-container * { box-sizing: border-box; }
+
+.unitconv-title {
+    font-family: 'Montserrat', sans-serif; font-size: 2rem; text-align: center;
+    text-transform: uppercase; margin-top: 0; margin-bottom: 10px; font-weight: 900;
+}
+
+.unitconv-desc { text-align: center; color: #555; font-weight: 600; margin-bottom: 25px; }
+
+/* Tabs */
+.unitconv-tabs {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    margin-bottom: 30px; border-bottom: 3px dashed #111; padding-bottom: 20px;
+}
+
+.unitconv-tab {
+    background-color: #f4f4f4; border: 3px solid #111; border-radius: 8px;
+    padding: 10px 20px; font-family: 'Montserrat', sans-serif; font-weight: 800;
+    font-size: 1rem; cursor: pointer; box-shadow: 3px 3px 0px #111;
+    transition: transform 0.1s, box-shadow 0.1s, background-color 0.2s;
+}
+.unitconv-tab:hover { background-color: #e6f7ff; }
+.unitconv-tab:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+.unitconv-tab.active { background-color: #fdfd96; transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+/* Workspace */
+.unitconv-workspace {
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    background-color: #f9f9f9; border: 3px solid #111; border-radius: 10px;
+    padding: 30px; box-shadow: 4px 4px 0px #111; margin-bottom: 25px;
+}
+
+.unitconv-box { flex: 1; }
+.unitconv-label { display: block; font-weight: 800; font-size: 1.1rem; margin-bottom: 10px; text-transform: uppercase; }
+
+.unitconv-input-group {
+    display: flex; border: 3px solid #111; border-radius: 8px;
+    overflow: hidden; box-shadow: 3px 3px 0px #111; background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.unitconv-input-group:focus-within { transform: translateY(-3px); box-shadow: 5px 5px 0px #111; }
+
+.unitconv-input {
+    flex: 1; width: 100%; border: none; padding: 15px; font-size: 1.5rem;
+    font-weight: 900; font-family: 'Montserrat', monospace; outline: none;
+    border-right: 3px solid #111;
+}
+
+.unitconv-select {
+    width: 120px; border: none; background-color: #e2f0cb; padding: 0 10px;
+    font-weight: 800; font-size: 1rem; cursor: pointer; outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.unitconv-swap-icon {
+    font-size: 2.5rem; font-weight: 900; cursor: pointer; padding: 10px;
+    border: 3px solid #111; border-radius: 50%; background-color: #ffb7b2;
+    width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+    box-shadow: 3px 3px 0px #111; transition: transform 0.1s; flex-shrink: 0;
+}
+.unitconv-swap-icon:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+/* Footer */
+.unitconv-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;}
+.unitconv-formula { font-weight: 700; color: #2d7bb5; background: #e6f7ff; padding: 10px 15px; border-radius: 6px; border: 2px dashed #2d7bb5; }
+.unitconv-btn-copy {
+    background-color: #b5ead7; font-family: 'Montserrat', sans-serif; font-weight: 900;
+    border: 3px solid #111; border-radius: 8px; padding: 12px 20px; cursor: pointer;
+    box-shadow: 3px 3px 0px #111; transition: transform 0.1s;
+}
+.unitconv-btn-copy:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+
+/* Toast */
+#unitconvToast {
+    visibility: hidden; min-width: 200px; background-color: #111111; color: #ffffff;
+    text-align: center; border-radius: 8px; padding: 12px; position: fixed;
+    z-index: 9999; bottom: 30px; left: 50%; transform: translateX(-50%);
+    font-weight: bold; opacity: 0; transition: opacity 0.3s, bottom 0.3s;
+}
+#unitconvToast.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+@media (max-width: 768px) {
+    .unitconv-workspace { flex-direction: column; }
+    .unitconv-swap-icon { transform: rotate(90deg); margin: 10px 0; }
+    .unitconv-swap-icon:active { transform: rotate(90deg) translate(3px, -3px); }
+    .unitconv-footer { flex-direction: column; align-items: stretch; text-align: center; }
+    .unitconv-input { width: 60%; }
+    .unitconv-select { width: 40%; }
+}
