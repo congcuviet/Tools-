@@ -1,0 +1,30 @@
+/* Giao diện Soft Neo-Brutalism */
+:root {
+    --border-soft: 2px solid #2d3142;
+    --shadow-soft: 4px 4px 0px rgba(45, 49, 66, 0.8);
+    --clr-bg: #faf9f6;        
+    --clr-surface: #ffffff;   
+    --clr-primary: #8fb8ed;   
+    --clr-pink: #f4acb7;      
+    --clr-success: #81b29a;   
+    --clr-text: #2d3142;      
+}
+
+.s2f-soft-wrapper { max-width: 900px; margin: 0 auto; font-family: system-ui, -apple-system, sans-serif; color: var(--clr-text); background: var(--clr-bg); padding: 25px; border: var(--border-soft); border-radius: 16px; box-shadow: var(--shadow-soft); }
+
+.s2f-soft-header { background: var(--clr-surface); padding: 20px; border: var(--border-soft); border-radius: 12px; text-align: center; margin-bottom: 25px; box-shadow: var(--shadow-soft); }
+.s2f-soft-header h2 { margin: 0 0 8px 0; font-size: 1.8rem; font-weight: 800; }
+
+.upload-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; background: var(--clr-pink); padding: 50px 20px; border: 2px dashed var(--clr-text); border-radius: 12px; cursor: pointer; transition: all 0.2s ease; }
+.upload-label:hover { background: #ea9ab2; transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+
+.preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.canvas-bg { width: 100%; aspect-ratio: 1/1; background-image: radial-gradient(#d1d1d1 1.5px, transparent 1.5px); background-size: 20px 20px; border: var(--border-soft); border-radius: 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; background-color: #fff;}
+.canvas-bg svg { max-width: 90%; max-height: 90%; }
+
+.box-title { font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+
+.action-bar { display: flex; gap: 12px; }
+.btn-primary-soft { flex: 1; padding: 16px; font-weight: 800; background: var(--clr-primary); border: var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-soft); cursor: pointer; text-transform: uppercase; }
+.btn-success-soft { flex: 1; padding: 16px; font-weight: 800; background: var(--clr-success); border: var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-soft); text-align: center; text-decoration: none; color: var(--clr-text); text-transform: uppercase;}
+.action-btn { padding: 16px; font-weight: 700; background: var(--clr-surface); border: var(--border-soft); border-radius: 10px; box-shadow: var(--shadow-soft); cursor: pointer; }
