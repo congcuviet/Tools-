@@ -71,6 +71,16 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Chuyển đổi XML sang JSON (XML to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-xml-sang-json-xml-to-json-converter/) |
 | Chuyển đổi YAML sang JSON (YAML to JSON Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-yaml-sang-json-yaml-to-json-converter/) |
 | Chuyển đổi YAML sang TOML (YAML to TOML Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-doi-yaml-sang-toml-yaml-to-toml-converter/) |
+| Chuyển File Bằng QR Động | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-file-bang-qr-dong/) |
+| Chuyển giọng nói thành văn bản tiếng Việt | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-giong-noi-thanh-van-ban-tieng-viet/) |
+| Chuyển văn bản sang Unicode – Text to Unicode | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-van-ban-sang-unicode-text-to-unicode/) |
+| Chuyển Video sang GIF và GIF sang Video | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-video-sang-gif-video-to-gif/) |
+| Chuyển viền SVG thành khối – SVG Stroke to Fill Converter | [Mở công cụ](https://congcuviet.com/cong-cu/chuyen-vien-svg-thanh-khoi-svg-stroke-to-fill-converter/) |
+| Công cụ chia nhóm/chia đội ngẫu nhiên | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chia-nhom-chia-doi-ngau-nhien/) |
+| Công cụ chuyển đổi chữ hoa/chữ thường (Case Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-chu-hoa-chu-thuong-case-converter/) |
+| Công cụ chuyển đổi định dạng JSON sang CSV/XML | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-dinh-dang-json-sang-csv-xml/) |
+| Công cụ chuyển đổi đơn vị đo lường (Unit Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-don-vi-do-luong-unit-converter/) |
+| Công cụ chuyển đổi mã màu (HEX, RGB, HSL, CMYK) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-ma-mau-hex-rgb-hsl-cmyk/) |
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
 ## Theo dõi Công Cụ Việt
