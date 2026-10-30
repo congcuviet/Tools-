@@ -1,0 +1,102 @@
+/* GIAO DIỆN SOFT BRUTALISM - CASE CONVERTER */
+.tool-container {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 3px solid #111111;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 30px;
+    background: #ffffff;
+    color: #111111;
+    box-sizing: border-box;
+}
+
+h2.tool-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.converter-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-area-wrapper label {
+    display: block; font-weight: 800; margin-bottom: 10px; font-size: 1.05rem;
+}
+
+.text-area-wrapper textarea {
+    width: 100%; height: 300px; padding: 15px; font-size: 1.1rem;
+    font-family: 'Inter', sans-serif; border: 3px solid #111111;
+    border-radius: 8px; outline: none; box-sizing: border-box;
+    background-color: #f9f9f9; box-shadow: 4px 4px 0px #111111;
+    transition: box-shadow 0.2s, background-color 0.2s; resize: vertical; line-height: 1.6;
+}
+
+.text-area-wrapper textarea:focus {
+    background-color: #ffffff; box-shadow: 6px 6px 0px #111111;
+}
+
+.stats-bar {
+    display: flex; justify-content: space-between; margin-top: 10px;
+    font-size: 0.95rem; font-weight: 600; color: #555; padding: 0 5px;
+}
+.stats-bar strong { color: #111111; font-family: 'Montserrat', sans-serif; font-size: 1.1rem; }
+
+/* Grid nút chuyển đổi */
+.conversion-buttons {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;
+    margin-top: 10px; margin-bottom: 10px;
+}
+
+.btn-case {
+    cursor: pointer; font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; padding: 15px 10px; border: 3px solid #111111;
+    border-radius: 8px; box-shadow: 3px 3px 0px #111111; transition: transform 0.1s, box-shadow 0.1s;
+    color: #111111; text-align: center;
+}
+.btn-case:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111111; }
+
+/* Trực quan hóa các nút bằng CSS */
+.btn-sentence { background-color: #ffb7b2; text-transform: none; }
+.btn-sentence::first-letter { text-transform: uppercase; }
+.btn-lower { background-color: #fdfd96; text-transform: lowercase; }
+.btn-upper { background-color: #b5ead7; text-transform: uppercase; }
+.btn-capitalized { background-color: #cbaacb; text-transform: capitalize; }
+
+/* Grid nút hành động chung */
+.action-buttons {
+    display: grid; grid-template-columns: 2fr 1fr; gap: 15px; border-top: 3px dashed #111111; padding-top: 20px;
+}
+
+.action-buttons button {
+    cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 1.1rem;
+    font-weight: 900; padding: 15px; border: 3px solid #111111; border-radius: 8px;
+    box-shadow: 4px 4px 0px #111111; transition: transform 0.1s, box-shadow 0.1s;
+    text-transform: uppercase; color: #111111;
+}
+.action-buttons button:active { transform: translate(4px, 4px); box-shadow: 0px 0px 0px #111111; }
+
+.btn-copy { background-color: #97c1a9; }
+.btn-clear { background-color: #eceae4; } 
+
+/* Toast Thông báo */
+#toastCase {
+    visibility: hidden; min-width: 200px; background-color: #111111; color: #ffffff;
+    text-align: center; border-radius: 8px; padding: 12px; position: fixed;
+    z-index: 9999; bottom: 30px; left: 50%; transform: translateX(-50%);
+    font-weight: bold; opacity: 0; transition: opacity 0.3s, bottom 0.3s;
+}
+#toastCase.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+@media (max-width: 768px) {
+    .conversion-buttons { grid-template-columns: 1fr 1fr; }
+    .action-buttons { grid-template-columns: 1fr; }
+}
