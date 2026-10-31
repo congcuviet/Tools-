@@ -81,6 +81,16 @@ Mỗi công cụ nằm trong một thư mục riêng tại `tools/<slug>/`, gồ
 | Công cụ chuyển đổi định dạng JSON sang CSV/XML | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-dinh-dang-json-sang-csv-xml/) |
 | Công cụ chuyển đổi đơn vị đo lường (Unit Converter) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-don-vi-do-luong-unit-converter/) |
 | Công cụ chuyển đổi mã màu (HEX, RGB, HSL, CMYK) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-ma-mau-hex-rgb-hsl-cmyk/) |
+| Công cụ chuyển đổi phần trăm sang ppm – Percent to PPM Converter | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-doi-phan-tram-sang-ppm-percent-to-ppm-converter/) |
+| Công cụ chuyển JPG sang PDF – JPG to PDF | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-jpg-sang-pdf-jpg-to-pdf/) |
+| Công cụ chuyển PDF sang JPG – PDF to JPG | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-chuyen-pdf-sang-jpg-pdf-to-jpg/) |
+| Công cụ sắp xếp lại trang PDF – Reorder PDF Pages | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-dat-hang-lai-pdf-trang-reorder-pdf-pages/) |
+| Công cụ đếm PDF từ – PDF Word Counter | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-dem-pdf-tu-pdf-word-counter/) |
+| Công cụ đếm số từ và ký tự (Word & Character Counter) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-dem-so-tu-va-ky-tu-word-character-counter/) |
+| Công cụ ước tính thời gian đọc (Reading Time) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-dem-thoi-gian-doc-uoc-tinh-reading-time/) |
+| Công cụ đổ xúc xắc trực tuyến (Dice Roller) | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-do-xuc-xac-truc-tuyen-dice-roller/) |
+| Công cụ gỡ bỏ các thẻ HTML khỏi đoạn văn bản | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-go-bo-cac-the-html-khoi-doan-van-ban/) |
+| Công cụ gộp file PDF – Merge PDF | [Mở công cụ](https://congcuviet.com/cong-cu/cong-cu-gop-file-pdf-merge-pdf/) |
 Danh sách sẽ tiếp tục được bổ sung theo từng đợt.
 
 ## Theo dõi Công Cụ Việt
