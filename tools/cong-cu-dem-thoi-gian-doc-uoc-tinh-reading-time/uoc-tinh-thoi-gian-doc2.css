@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+:root {
+  /* Bảng màu Retro 20 màu */
+  --color-1: #E27D60;  --color-2: #85DCBA;  --color-3: #E8A87C;  --color-4: #C38D9E;  --color-5: #41B3A3;
+  --color-6: #E9C46A;  --color-7: #F4A261;  --color-8: #E76F51;  --color-9: #D4A373;  --color-10: #FAEDCB;
+  --color-11: #A8DADC; --color-12: #457B9D; --color-13: #1D3557; --color-14: #2A9D8F; --color-15: #264653;
+  --color-16: #C9E4DE; --color-17: #A3B18A; --color-18: #588157; --color-19: #A5A58D; --color-20: #F4F1DE;
+}
+
+/* WRAPPER NỀN TRẮNG BẮT BUỘC */
+.rt-neo-wrapper {
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 900px; margin: 30px auto; background: #fff;
+    border: 3px solid #000; border-radius: 16px; box-shadow: 10px 10px 0px #000;
+    padding: 25px; box-sizing: border-box; color: #000;
+}
+.rt-neo-wrapper * { box-sizing: border-box; }
+
+.rt-header {
+    background: var(--color-20); padding: 20px; border-radius: 12px;
+    border: 3px solid #000; box-shadow: 4px 4px 0px #000; margin-bottom: 25px; text-align: center;
+}
+.rt-header h2 { margin: 0 0 10px 0; font-size: 1.8rem; font-weight: 900; text-transform: uppercase; color: #111;}
+.rt-header p { margin: 0; font-weight: 700; font-size: 1rem; color: #333; }
+
+/* MASTER RULE: NHÃN ĐEN, ĐẬM, IN HOA */
+.rt-neo-wrapper label { display: block; color: #000 !important; font-weight: 900; font-size: 1.1rem; margin-bottom: 10px; text-transform: uppercase;}
+
+/* KHU VỰC TEXTAREA */
+.rt-input-section { margin-bottom: 30px; }
+.rt-textarea {
+    width: 100%; padding: 20px; font-size: 1.15rem; font-weight: 500; font-family: inherit;
+    line-height: 1.6; resize: vertical; min-height: 200px;
+    border: 3px dashed #000; border-radius: 12px; outline: none; background: #fafafa; transition: 0.2s;
+}
+.rt-textarea:focus { 
+    border-style: solid; border-color: var(--color-13); 
+    box-shadow: 6px 6px 0px var(--color-13); transform: translateY(-3px); background: #fff;
+}
+
+/* KHU VỰC KẾT QUẢ */
+.rt-result-section { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.rt-stat-box { 
+    border: 3px solid #000; border-radius: 12px; padding: 25px 15px; 
+    box-shadow: 6px 6px 0px #000; text-align: center; display: flex; flex-direction: column; justify-content: center;
+    transition: transform 0.1s;
+}
+.rt-stat-box:hover { transform: translateY(-3px); }
+
+/* Retro Palette Backgrounds */
+.bg-mint { background: var(--color-2); }
+.bg-powder { background: var(--color-11); }
+.bg-mustard { background: var(--color-6); }
+
+.rt-stat-label { font-size: 1rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; color: #111; border-bottom: 2px solid rgba(0,0,0,0.2); padding-bottom: 8px;}
+.rt-stat-value { font-family: 'Courier New', monospace; font-size: 3rem; font-weight: 900; line-height: 1; color: #000; text-shadow: 2px 2px 0px rgba(255,255,255,0.5);}
+
+.text-dark { color: #000 !important; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rt-result-section { grid-template-columns: 1fr; }
+    .rt-stat-value { font-size: 2.5rem; }
+}
