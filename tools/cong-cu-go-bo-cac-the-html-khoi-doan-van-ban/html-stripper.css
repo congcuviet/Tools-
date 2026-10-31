@@ -1,0 +1,67 @@
+/* GIAO DIỆN SOFT BRUTALISM - HTML STRIPPER */
+.tool-container {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    max-width: 1000px; margin: 20px auto;
+    border: 3px solid #111111; border-radius: 12px;
+    box-shadow: 6px 6px 0px #111111; padding: 30px;
+    background: #ffffff; color: #111111; box-sizing: border-box;
+}
+
+h2.tool-title {
+    font-family: 'Montserrat', sans-serif; font-size: 2rem;
+    text-align: center; text-transform: uppercase; margin-top: 0;
+    margin-bottom: 25px; font-weight: 900;
+}
+
+.main-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
+
+.input-box label { display: block; font-weight: 800; margin-bottom: 10px; font-size: 1.05rem; }
+
+.input-box textarea {
+    width: 100%; height: 350px; padding: 15px; font-size: 1rem;
+    font-family: 'Inter', monospace; border: 3px solid #111111;
+    border-radius: 8px; outline: none; box-sizing: border-box;
+    background-color: #f9f9f9; box-shadow: 4px 4px 0px #111111;
+    transition: box-shadow 0.2s, background-color 0.2s; resize: vertical; line-height: 1.6;
+}
+
+.input-box textarea:focus { background-color: #ffffff; box-shadow: 6px 6px 0px #111111; }
+
+#textOutput { background-color: #e2f0cb; font-weight: 500; }
+
+.options-panel {
+    background-color: #f4f4f4; padding: 15px 20px; border: 3px solid #111111;
+    border-radius: 8px; margin-bottom: 25px; display: flex; flex-wrap: wrap; gap: 20px;
+}
+
+.checkbox-container { display: flex; align-items: center; cursor: pointer; font-weight: 700; font-size: 1rem; user-select: none; }
+.checkbox-container input { margin-right: 8px; width: 18px; height: 18px; accent-color: #111111; cursor: pointer; }
+
+.action-buttons { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px; }
+
+.action-buttons button {
+    cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 1.1rem;
+    font-weight: 900; padding: 15px; border: 3px solid #111111; border-radius: 8px;
+    box-shadow: 4px 4px 0px #111111; transition: transform 0.1s, box-shadow 0.1s;
+    text-transform: uppercase; color: #111111;
+}
+.action-buttons button:active:not(:disabled) { transform: translate(4px, 4px); box-shadow: 0px 0px 0px #111111; }
+.action-buttons button:disabled { background-color: #ddd; color: #888; cursor: not-allowed; box-shadow: 4px 4px 0px #111111; }
+
+.btn-strip { background-color: #ffb7b2; } 
+.btn-copy { background-color: #b5ead7; } 
+.btn-clear { background-color: #eceae4; } 
+
+#toastHtml {
+    visibility: hidden; min-width: 200px; background-color: #111111; color: #ffffff;
+    text-align: center; border-radius: 8px; padding: 12px; position: fixed;
+    z-index: 9999; bottom: 30px; left: 50%; transform: translateX(-50%);
+    font-weight: bold; opacity: 0; transition: opacity 0.3s, bottom 0.3s;
+}
+#toastHtml.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+@media (max-width: 768px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .action-buttons { grid-template-columns: 1fr; }
+    .options-panel { flex-direction: column; gap: 12px; }
+}
