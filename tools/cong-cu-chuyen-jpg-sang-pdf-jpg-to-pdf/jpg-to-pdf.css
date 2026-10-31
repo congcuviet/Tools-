@@ -1,0 +1,34 @@
+.j2p-soft-wrapper{--j2p-border:#1e293b;max-width:900px;margin:0 auto;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1e293b;box-sizing:border-box}
+.j2p-soft-wrapper *{box-sizing:border-box}
+.j2p-card{background:#fff;border:2.5px solid var(--j2p-border);border-radius:20px;padding:20px;box-shadow:4px 4px 0 var(--j2p-border);margin-bottom:16px}
+.j2p-card-title{margin:0 0 12px;font-size:18px;font-weight:900}
+.j2p-lib-error{background:#fef2f2;border:2.5px solid #dc2626;color:#991b1b;border-radius:14px;padding:12px 15px;font-weight:700;margin-bottom:14px}
+.j2p-drop{display:flex;flex-direction:column;align-items:center;gap:5px;border:3px dashed #fb923c;background:#fff7ed;border-radius:18px;padding:28px 18px;cursor:pointer;text-align:center}
+.j2p-drop.j2p-over{background:#ffedd5;border-color:#ea580c}
+.j2p-drop-icon{font-size:40px}
+.j2p-drop-text{font-weight:900;font-size:17px}
+.j2p-drop-sub{font-size:13px;color:#64748b;font-weight:600}
+.j2p-file-hidden{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.j2p-list{list-style:none;margin:14px 0 0;padding:0}
+.j2p-item{display:flex;align-items:center;gap:10px;border:2px solid var(--j2p-border);border-radius:13px;padding:8px 12px;margin-bottom:8px;background:#fffbeb;box-shadow:2px 2px 0 var(--j2p-border)}
+.j2p-thumb{width:44px;height:44px;object-fit:cover;border-radius:8px;border:2px solid var(--j2p-border);flex:none}
+.j2p-name{font-weight:800;font-size:14px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.j2p-ctl{border:2px solid var(--j2p-border);background:#fef9c3;border-radius:9px;width:30px;height:30px;font-weight:900;cursor:pointer;flex:none;padding:0}
+.j2p-ctl.j2p-del{background:#fecaca}
+.j2p-summary{font-weight:700;font-size:14.5px;margin:10px 0 0}
+.j2p-label{display:block;font-weight:800;font-size:14px;margin:15px 0 6px}
+.j2p-inp{width:100%;border:2px solid var(--j2p-border);border-radius:12px;padding:10px 12px;font-size:15.5px;font-weight:700;background:#fffef5}
+.j2p-error{color:#dc2626;font-weight:800;font-size:14px;min-height:19px;margin:9px 0 0}
+.j2p-btn{border:2.5px solid var(--j2p-border);border-radius:14px;padding:12px 22px;font-size:16px;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 var(--j2p-border);text-decoration:none;display:inline-block}
+.j2p-btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--j2p-border)}
+.j2p-btn:disabled{opacity:.45;cursor:default}
+.j2p-btn-main{background:#fdba74;color:#1e293b}
+.j2p-status{font-weight:700;font-size:14px;color:#b45309;min-height:20px;margin:10px 0 0}
+.j2p-verdict{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2.5px solid var(--j2p-border);border-radius:16px;padding:13px 15px;font-weight:800;font-size:15.5px;line-height:1.55;box-shadow:3px 3px 0 var(--j2p-border);margin:0 0 14px}
+.j2p-note{font-size:13.5px;color:#64748b;line-height:1.55;margin:10px 0 0}
+.j2p-note a{color:#b45309;font-weight:800}
+
+/* — Mobile guard 2026-10-24: chống tràn ngang (grid/flex blowout) và chống zoom khi chạm ô nhập — */
+.j2p-soft-wrapper{overflow-x:clip}
+.j2p-soft-wrapper *{min-width:0}
+.j2p-soft-wrapper input,.j2p-soft-wrapper select,.j2p-soft-wrapper textarea{font-size:16px !important;max-width:100%}
