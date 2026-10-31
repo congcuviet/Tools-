@@ -1,0 +1,118 @@
+/* GIAO DIỆN SOFT BRUTALISM - WORD COUNTER */
+.tool-container {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 3px solid #111111;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0px #111111;
+    padding: 30px;
+    background: #ffffff;
+    color: #111111;
+    box-sizing: border-box;
+}
+
+h2.tool-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+/* --- BẢNG THỐNG KÊ --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    border: 3px solid #111111;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 4px 4px 0px #111111;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-card h4 {
+    margin: 0 0 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #111111;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    word-break: break-word;
+    line-height: 1.1;
+}
+
+/* Các màu nền Pastel */
+.bg-yellow { background-color: #fdfd96; }
+.bg-green { background-color: #b5ead7; }
+.bg-orange { background-color: #ffdac1; }
+.bg-purple { background-color: #cbaacb; }
+.bg-blue { background-color: #a2e1db; }
+.bg-red { background-color: #ffb7b2; }
+
+/* --- KHU VỰC TEXTAREA --- */
+.text-area-wrapper label {
+    display: block; font-weight: 800; margin-bottom: 10px; font-size: 1.05rem;
+}
+
+.text-area-wrapper textarea {
+    width: 100%; height: 350px; padding: 20px; font-size: 1.1rem;
+    font-family: 'Inter', sans-serif; border: 3px solid #111111;
+    border-radius: 8px; outline: none; box-sizing: border-box;
+    background-color: #f9f9f9; box-shadow: 4px 4px 0px #111111;
+    transition: box-shadow 0.2s, background-color 0.2s; resize: vertical; line-height: 1.6;
+}
+
+.text-area-wrapper textarea:focus {
+    background-color: #ffffff; box-shadow: 6px 6px 0px #111111;
+}
+
+/* --- NÚT BẤM --- */
+.action-buttons {
+    display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-top: 25px;
+}
+
+.action-buttons button {
+    cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 1.1rem;
+    font-weight: 900; padding: 15px; border: 3px solid #111111; border-radius: 8px;
+    box-shadow: 4px 4px 0px #111111; transition: transform 0.1s, box-shadow 0.1s;
+    text-transform: uppercase; color: #111111;
+}
+.action-buttons button:active { transform: translate(4px, 4px); box-shadow: 0px 0px 0px #111111; }
+
+.btn-copy { background-color: #97c1a9; }
+.btn-clear { background-color: #eceae4; } 
+
+/* Toast Thông báo */
+#toastCounter {
+    visibility: hidden; min-width: 200px; background-color: #111111; color: #ffffff;
+    text-align: center; border-radius: 8px; padding: 12px; position: fixed;
+    z-index: 9999; bottom: 30px; left: 50%; transform: translateX(-50%);
+    font-weight: bold; opacity: 0; transition: opacity 0.3s, bottom 0.3s;
+}
+#toastCounter.show { visibility: visible; opacity: 1; bottom: 50px; }
+
+/* Responsive */
+@media (max-width: 800px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .action-buttons { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+    .stats-grid { grid-template-columns: 1fr; }
+}
