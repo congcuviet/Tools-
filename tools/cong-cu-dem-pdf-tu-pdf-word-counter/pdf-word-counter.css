@@ -1,0 +1,40 @@
+.pwc-soft-wrapper{--pwc-border:#1e293b;max-width:900px;margin:0 auto;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1e293b;box-sizing:border-box}
+.pwc-soft-wrapper *{box-sizing:border-box}
+.pwc-card{background:#fff;border:2.5px solid var(--pwc-border);border-radius:20px;padding:20px;box-shadow:4px 4px 0 var(--pwc-border);margin-bottom:16px}
+.pwc-card-title{margin:0 0 12px;font-size:18px;font-weight:900}
+.pwc-lib-error{background:#fef2f2;border:2.5px solid #dc2626;color:#991b1b;border-radius:14px;padding:12px 15px;font-weight:700;margin-bottom:14px}
+.pwc-drop{display:flex;flex-direction:column;align-items:center;gap:5px;border:3px dashed #fb923c;background:#fff7ed;border-radius:18px;padding:28px 18px;cursor:pointer;text-align:center}
+.pwc-drop.pwc-over{background:#ffedd5;border-color:#ea580c}
+.pwc-drop-icon{font-size:40px}
+.pwc-drop-text{font-weight:900;font-size:17px}
+.pwc-drop-sub{font-size:13px;color:#64748b;font-weight:600}
+.pwc-file-hidden{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.pwc-fileinfo{font-weight:700;font-size:14.5px;margin:13px 0 0}
+.pwc-status{font-weight:700;font-size:14px;color:#b45309;min-height:20px;margin:10px 0 0}
+.pwc-verdict{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2.5px solid var(--pwc-border);border-radius:16px;padding:13px 15px;font-weight:800;font-size:15.5px;line-height:1.55;box-shadow:3px 3px 0 var(--pwc-border);margin:0 0 14px}
+.pwc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pwc-stat{background:#fffbeb;border:2px solid var(--pwc-border);border-radius:14px;padding:10px 12px;box-shadow:3px 3px 0 var(--pwc-border)}
+.pwc-stat.pwc-hero{background:#fef9c3}
+.pwc-stat-cap{display:block;font-size:12.5px;font-weight:800;color:#64748b}
+.pwc-stat-val{display:block;font-size:19px;font-weight:900;font-variant-numeric:tabular-nums;margin-top:2px}
+.pwc-sub{font-size:16px;font-weight:900;margin:18px 0 9px}
+.pwc-kw{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:14px}
+.pwc-kw-word{font-weight:800;min-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pwc-kw-bar{flex:1;background:#f1f5f9;border:2px solid var(--pwc-border);border-radius:999px;height:16px;overflow:hidden}
+.pwc-kw-fill{height:100%;background:linear-gradient(90deg,#fdba74,#f97316)}
+.pwc-kw-count{font-weight:900;font-variant-numeric:tabular-nums;min-width:44px;text-align:right}
+.pwc-acc{margin-top:16px}
+.pwc-acc summary{font-weight:900;font-size:16px;cursor:pointer}
+.pwc-tablewrap{overflow-x:auto;margin-top:10px}
+.pwc-table{width:100%;border-collapse:collapse;font-size:14.5px}
+.pwc-table th,.pwc-table td{border:2px solid var(--pwc-border);padding:7px 10px;text-align:right;font-variant-numeric:tabular-nums}
+.pwc-table th{background:#fef9c3;text-align:right}
+.pwc-table th:first-child,.pwc-table td:first-child{text-align:left}
+.pwc-note{font-size:13.5px;color:#64748b;line-height:1.55;margin:13px 0 0}
+.pwc-note a{color:#b45309;font-weight:800}
+@media (max-width:700px){.pwc-stats{grid-template-columns:1fr 1fr}}
+
+/* — Mobile guard 2026-10-24: chống tràn ngang (grid/flex blowout) và chống zoom khi chạm ô nhập — */
+.pwc-soft-wrapper{overflow-x:clip}
+.pwc-soft-wrapper *{min-width:0}
+.pwc-soft-wrapper input,.pwc-soft-wrapper select,.pwc-soft-wrapper textarea{font-size:16px !important;max-width:100%}
