@@ -1,0 +1,83 @@
+/* RE-SKIN 2026-10-31 theo chuẩn cứng mục 9: giữ bản sắc tool gốc (coral #e05a47 + kem bơ + mint), mỗi vùng là thẻ riêng có bóng cứng, cỡ chữ desktop lớn. Giữ nguyên toàn bộ cơ chế 3D xúc xắc. */
+.dr2-soft-wrapper{--dr2-ink:#0f172a;--dr2-muted:#475569;--dr2-primary:#e05a47;--dr2-primary-dark:#a93424;--dr2-butter:#fef08a;--dr2-cream:#fdf3d8;max-width:920px;margin:20px auto;padding:22px;background:#fdf6ec;border:3px solid var(--dr2-ink);border-radius:16px;box-shadow:8px 8px 0 var(--dr2-ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;color:var(--dr2-ink);box-sizing:border-box;overflow-x:clip}
+.dr2-soft-wrapper *{box-sizing:border-box;min-width:0}
+.dr2-soft-wrapper input,.dr2-soft-wrapper select{font-size:16px !important;max-width:100%}
+.dr2-toprow{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+.dr2-tabs{display:flex;gap:10px;flex:1;flex-wrap:wrap}
+.dr2-tab{flex:1 1 0;min-width:150px;height:52px;padding:0 12px;font-weight:800;font-size:16px;border:2.5px solid var(--dr2-ink);border-radius:10px;background:#fff;color:var(--dr2-ink);cursor:pointer;box-shadow:3px 3px 0 var(--dr2-ink);transition:transform .08s ease,box-shadow .08s ease}
+.dr2-tab:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--dr2-ink)}
+.dr2-tab.active{background:var(--dr2-primary);color:#fff;transform:translate(2px,2px);box-shadow:1px 1px 0 var(--dr2-ink)}
+.dr2-sound{width:44px;height:44px;border-radius:50%;border:2.5px solid var(--dr2-ink);background:var(--dr2-butter);font-size:18px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;line-height:1;padding:0;flex:none;box-shadow:2px 2px 0 var(--dr2-ink)}
+.dr2-sound:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--dr2-ink)}
+.dr2-controls{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:#fff;border:2.5px solid var(--dr2-ink);border-radius:12px;box-shadow:5px 5px 0 var(--dr2-ink);padding:20px;margin-bottom:16px}
+.dr2-group{display:flex;flex-direction:column;gap:8px}
+.dr2-soft-wrapper .dr2-label{font-weight:800;font-size:15.5px;color:#1e293b}
+.dr2-soft-wrapper .dr2-select,.dr2-soft-wrapper .dr2-input{width:100%;height:52px;padding:12px;font-size:17px !important;border:2.5px solid var(--dr2-ink);border-radius:10px;background:#fff;color:#0f172a;font-weight:600}
+.dr2-stepper{display:flex;align-items:center;gap:10px}
+.dr2-step{width:38px;height:38px;flex:none;border-radius:50%;border:2.5px solid var(--dr2-ink);background:var(--dr2-butter);color:var(--dr2-ink);font-size:18px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;line-height:1;padding:0;box-shadow:2px 2px 0 var(--dr2-ink)}
+.dr2-step:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--dr2-ink)}
+.dr2-soft-wrapper .dr2-step-input{width:84px;flex:0 0 84px;text-align:center}
+.dr2-adv{background:#fff;border:2.5px solid var(--dr2-ink);border-radius:12px;box-shadow:5px 5px 0 var(--dr2-ink);margin-bottom:16px}
+.dr2-adv summary{padding:14px 20px;font-weight:800;font-size:16px;cursor:pointer;color:#1e293b}
+.dr2-adv-body{padding:0 20px 18px;display:flex;flex-direction:column;gap:8px}
+.dr2-note{margin:0;color:var(--dr2-muted);font-size:14px;line-height:1.55}
+.dr2-arena{background:var(--dr2-cream);border:2.5px solid var(--dr2-ink);border-radius:12px;box-shadow:5px 5px 0 var(--dr2-ink);padding:20px 14px 14px;position:relative;perspective:1000px;cursor:pointer;text-align:center}
+.dr2-result-board{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:10px}
+.dr2-hidden{display:none !important}
+.dr2-main-text{font-size:40px;font-weight:900;color:#c22424;line-height:1.1}
+.dr2-notation{font-weight:800;font-size:16px;color:#334155}
+.dr2-sub-text{display:inline-block;font-weight:800;font-size:15.5px;background:#fff;padding:7px 15px;border-radius:999px;border:2px solid var(--dr2-ink);box-shadow:2px 2px 0 var(--dr2-ink)}
+.dr2-minmax{color:var(--dr2-muted);font-size:15px;font-weight:700}
+.dr2-dice-arena{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;padding:18px 8px 8px}
+.dr2-hint{color:var(--dr2-muted);font-weight:700;font-size:14.5px;margin:10px 0 0}
+.dr2-roll-big{width:100%;height:56px;cursor:pointer;font-size:19px;font-weight:900;margin-top:18px;padding:0 20px;background:var(--dr2-primary);color:#fff;border:2.5px solid var(--dr2-ink);border-radius:12px;box-shadow:5px 5px 0 var(--dr2-ink)}
+.dr2-roll-big:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--dr2-ink)}
+.dr2-roll-big:disabled{background:#e2e8f0;color:#94a3b8;cursor:not-allowed;box-shadow:none}
+.dr2-roll-big.dr2-sim{background:#b45309;color:#fff}
+.dr2-error{color:#b91c1c;font-weight:700;font-size:15px;line-height:1.55;margin:12px 0}
+.dr2-sim-arena{background:#fff;border:2.5px solid var(--dr2-ink);border-radius:12px;box-shadow:5px 5px 0 var(--dr2-ink);padding:20px;margin-top:0}
+.dr2-sim-stats{margin:0 0 14px;font-weight:800;font-size:16px;text-align:center;border-bottom:2px dashed #cbd5e1;padding-bottom:12px}
+.dr2-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.dr2-bar-label{font-weight:800;font-size:15px;width:58px}
+.dr2-bar-track{flex:1;min-width:120px;height:24px;background:#f1f5f9;border:2px solid var(--dr2-ink);border-radius:7px;overflow:hidden}
+.dr2-bar-fill{height:100%;background:#059669;width:0%}
+.dr2-bar-value{font-weight:800;font-size:15px;text-align:right}
+.dr2-bar-theory{color:var(--dr2-muted);font-size:13.5px;font-weight:600}
+.dr2-history{margin-top:20px;background:#fff;border:2.5px solid var(--dr2-ink);border-radius:12px;box-shadow:5px 5px 0 var(--dr2-ink);padding:18px 20px}
+.dr2-history-title{font-size:17px;font-weight:900;margin:0 0 10px;color:#1e293b}
+.dr2-history-list{margin:0 0 14px;padding-left:22px;line-height:1.65;font-size:15.5px}
+.dr2-actions{display:flex;gap:10px;flex-wrap:wrap}
+.dr2-btn{height:48px;padding:0 18px;border-radius:10px;border:2.5px solid var(--dr2-ink);background:#fff;color:var(--dr2-ink);font-weight:800;font-size:15.5px;cursor:pointer;box-shadow:3px 3px 0 var(--dr2-ink)}
+.dr2-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--dr2-ink)}
+.dr2-btn:first-child{background:var(--dr2-primary);color:#fff}
+.dr2-dice{width:72px;height:72px;position:relative;transform-style:preserve-3d;transition:transform 1.2s cubic-bezier(.1,.8,.2,1);pointer-events:none}
+.dr2-face{position:absolute;width:100%;height:100%;background:#fff;border:2px solid #0f172a;border-radius:10px;display:grid;grid-template:repeat(3,1fr)/repeat(3,1fr);gap:5px;padding:9px;backface-visibility:hidden}
+.dr2-dot{background:#0f172a;border-radius:50%;width:100%;height:100%}
+.dr2-face-1{transform:rotateY(0deg) translateZ(36px)}
+.dr2-face-2{transform:rotateX(-90deg) translateZ(36px)}
+.dr2-face-3{transform:rotateY(90deg) translateZ(36px)}
+.dr2-face-4{transform:rotateY(-90deg) translateZ(36px)}
+.dr2-face-5{transform:rotateX(90deg) translateZ(36px)}
+.dr2-face-6{transform:rotateY(180deg) translateZ(36px)}
+.dr2-face-1 .dr2-dot{grid-area:2/2;background:#dc2626}
+.dr2-face-2 .dr2-dot:nth-child(1){grid-area:1/1}.dr2-face-2 .dr2-dot:nth-child(2){grid-area:3/3}
+.dr2-face-3 .dr2-dot:nth-child(1){grid-area:1/1}.dr2-face-3 .dr2-dot:nth-child(2){grid-area:2/2}.dr2-face-3 .dr2-dot:nth-child(3){grid-area:3/3}
+.dr2-face-4 .dr2-dot:nth-child(1){grid-area:1/1}.dr2-face-4 .dr2-dot:nth-child(2){grid-area:1/3}.dr2-face-4 .dr2-dot:nth-child(3){grid-area:3/1}.dr2-face-4 .dr2-dot:nth-child(4){grid-area:3/3}
+.dr2-face-5 .dr2-dot:nth-child(1){grid-area:1/1}.dr2-face-5 .dr2-dot:nth-child(2){grid-area:1/3}.dr2-face-5 .dr2-dot:nth-child(3){grid-area:2/2}.dr2-face-5 .dr2-dot:nth-child(4){grid-area:3/1}.dr2-face-5 .dr2-dot:nth-child(5){grid-area:3/3}
+.dr2-face-6 .dr2-dot:nth-child(1){grid-area:1/1}.dr2-face-6 .dr2-dot:nth-child(2){grid-area:1/3}.dr2-face-6 .dr2-dot:nth-child(3){grid-area:2/1}.dr2-face-6 .dr2-dot:nth-child(4){grid-area:2/3}.dr2-face-6 .dr2-dot:nth-child(5){grid-area:3/1}.dr2-face-6 .dr2-dot:nth-child(6){grid-area:3/3}
+.dr2-poly{width:72px;height:72px;background:#fff;border:3px solid #0f172a;border-radius:14px;display:flex;align-items:center;justify-content:center;position:relative;font-size:32px;font-weight:900}
+.dr2-poly::after{content:attr(data-type);position:absolute;top:-10px;right:-10px;background:#dc2626;color:#fff;font-size:11px;padding:2px 6px;border-radius:8px;font-weight:800}
+@keyframes dr2shake{0%{transform:rotate(0deg)}25%{transform:rotate(12deg) scale(1.08)}50%{transform:rotate(0deg)}75%{transform:rotate(-12deg) scale(1.08)}100%{transform:rotate(0deg)}}
+.dr2-shaking{animation:dr2shake .2s infinite}
+@media (max-width:600px){
+.dr2-soft-wrapper{padding:14px;box-shadow:5px 5px 0 var(--dr2-ink)}
+.dr2-controls{grid-template-columns:1fr;padding:16px}
+.dr2-tab{min-width:0;font-size:15px}
+.dr2-soft-wrapper .dr2-select,.dr2-soft-wrapper .dr2-input{font-size:16px !important;height:50px}
+.dr2-dice{width:56px;height:56px}
+.dr2-face-1{transform:translateZ(28px)}.dr2-face-2{transform:rotateX(-90deg) translateZ(28px)}.dr2-face-3{transform:rotateY(90deg) translateZ(28px)}.dr2-face-4{transform:rotateY(-90deg) translateZ(28px)}.dr2-face-5{transform:rotateX(90deg) translateZ(28px)}.dr2-face-6{transform:rotateY(180deg) translateZ(28px)}
+.dr2-poly{width:56px;height:56px;font-size:26px}
+.dr2-main-text{font-size:34px}
+.dr2-arena,.dr2-sim-arena,.dr2-history{padding:16px}
+.dr2-actions .dr2-btn{flex:1 1 calc(50% - 5px)}
+}
